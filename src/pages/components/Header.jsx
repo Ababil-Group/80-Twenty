@@ -154,7 +154,7 @@ const Header = () => {
               <li key={idx} className="relative group">
                 <Link
                   to={item.path}
-                  className={`font-semibold text-sm transition-colors uppercase ${
+                  className={`font-semibold text-sm transition-colors font-quicksand uppercase ${
                     location.pathname === item.path
                       ? "text-secondary border-b-2 border-secondary"
                       : "text-gray-900 hover:text-secondary"
@@ -171,7 +171,7 @@ const Header = () => {
         <div className="md:hidden flex items-center space-x-4">
           <div className="flex">
             <button
-              className={`px-2 hover:text-secondary ${
+              className={`px-2 hover:text-secondary font-quicksand ${
                 i18n.language === "hr"
                   ? "text-secondary font-bold"
                   : "text-gray-800"
@@ -181,9 +181,9 @@ const Header = () => {
               HR
             </button>
             <button
-              className={`px-2 hover:text-red-600 border-l border-gray-200 ${
+              className={`px-2 hover:text-primary border-l font-quicksand border-gray-200 ${
                 i18n.language === "en"
-                  ? "text-red-600 font-bold"
+                  ? "text-primary font-bold"
                   : "text-gray-800"
               }`}
               onClick={() => i18n.changeLanguage("en")}
@@ -204,7 +204,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-8 h-8 bg-red-500 text-white p-1 font-bold"
+                className="w-8 h-8 bg-primary text-white p-1 font-bold"
               >
                 <path
                   strokeLinecap="round"
@@ -229,7 +229,7 @@ const Header = () => {
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
                   <img src={logo} width={130} height={60} alt="Company Logo" />
                   <button
-                    className="text-gray-800 hover:text-red-600"
+                    className="text-gray-800 hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <FaTimes className="h-6 w-6" />
@@ -244,7 +244,7 @@ const Header = () => {
                         {item.subNav ? (
                           <div>
                             <div
-                              className="flex justify-between items-center px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
+                              className="flex justify-between items-center px-4 py-2 text-lg font-medium font-quicksand text-gray-800 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
                               onClick={() => toggleSubMenu(idx)}
                             >
                               <span>{item.title}</span>
@@ -273,7 +273,7 @@ const Header = () => {
                                   <li key={subIdx}>
                                     <Link
                                       to={`${item.path}/${subItem.path}`}
-                                      className="block px-4 py-2 text-base font-normal text-gray-700 hover:bg-gray-200 rounded-lg transition-colors"
+                                      className="block px-4 py-2 text-base font-normal text-gray-700 font-quicksand hover:bg-gray-200 rounded-lg transition-colors"
                                       onClick={() => setIsMenuOpen(false)}
                                     >
                                       {subItem.title}
@@ -286,7 +286,7 @@ const Header = () => {
                         ) : (
                           <Link
                             to={item.path}
-                            className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors"
+                            className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 font-quicksand rounded-lg transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {item.title}
@@ -294,7 +294,7 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                    <li className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors border-b border-gray-300">
+                    {/* <li className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors border-b border-gray-300">
                       <a
                         href="https://www.concessum.com/blog/"
                         target="_blank"
@@ -303,7 +303,7 @@ const Header = () => {
                       >
                         Blog
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </nav>
               </div>

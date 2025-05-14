@@ -106,7 +106,7 @@ const Service = () => {
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center justify-between">
-            <div className="flex items-center text-2xl gap-x-3 text-white/90">
+            <div className="flex items-center text-xl md:text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
               <h2 className="text-white/80 font-bold uppercase">
                 {t("services.service")}

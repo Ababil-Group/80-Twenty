@@ -239,13 +239,13 @@ const ServiceDetails = () => {
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex items-center justify-between">
-            <div className="flex items-center text-2xl gap-x-3 text-white/90">
+            <div className="flex items-center text-xl md:text-2xl font-quicksand gap-x-3 text-white/90">
               <MdArrowForwardIos />
               <h2 className="text-white/80 font-bold uppercase">
                 {t("services.service")}
               </h2>
               <MdArrowForwardIos />
-              <h1 className="text-white/80 font-bold uppercase">
+              <h1 className="text-white/80 text-xl md:text-2xl font-quicksand font-bold uppercase">
                 {service.cardTitle}
               </h1>
             </div>
@@ -286,55 +286,55 @@ const ServiceDetails = () => {
                 <Carousel images={service.images} />
               </div>
               <div className="flex flex-col items-start space-y-6 mt-6">
-                <h2 className="text-2xl text-gray-800 font-bold tracking-wide">
+                <h2 className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide">
                   {service?.section1?.heading ? service.section1.heading : ""}
                 </h2>
 
                 {service?.section1?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800">
+                  <p key={inx} className="text-gray-800 font-quicksand">
                     {pra.p}
                   </p>
                 ))}
                 {service?.section1?.headTile1 && (
                   <>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <h2 className="text-lg text-gray-800 font-bold font-quicksand mt-6">
                       {service?.section1?.headTile1}
                     </h2>
-                    <p className="text-gray-800">{service?.section1?.para1}</p>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <p className="text-gray-800 font-quicksand">{service?.section1?.para1}</p>
+                    <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
                       {service?.section1?.headTile2}
                     </h2>
-                    <p className="text-gray-800">{service?.section1?.para2}</p>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <p className="text-gray-800 font-quicksand">{service?.section1?.para2}</p>
+                    <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
                       {service?.section1?.headTile3}
                     </h2>
-                    <p className="text-gray-800">{service?.section1?.para3}</p>
+                    <p className="text-gray-800 font-quicksand">{service?.section1?.para3}</p>
                   </>
                 )}
 
-                <h2 className="text-lg text-gray-800 font-bold mt-6">
+                <h2 className="text-lg text-gray-800 font-bold font-quicksand mt-6">
                   {service?.section1?.listTile}
                 </h2>
 
-                <ul className="text-gray-800 list-disc pl-5 space-y-2">
+                <ul className="text-gray-800 list-disc pl-5 font-quicksand space-y-2">
                   {service?.section1?.list?.map((list, idx) => (
                     <li key={idx}>{list.li}</li>
                   ))}
                 </ul>
 
-                <h2 className="text-2xl text-gray-800 font-bold tracking-wide mt-6">
+                <h2 className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide mt-6">
                   {service?.section2?.heading}
                 </h2>
 
                 {service?.section2?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800">
+                  <p key={inx} className="text-gray-800 font-quicksand">
                     {pra.p}
                   </p>
                 ))}
 
                 <ul className="text-gray-800 list-disc pl-5 space-y-2">
                   {service?.section2?.list?.map((list, idx) => (
-                    <li key={idx}>{list.li}</li>
+                    <li key={idx} className="font-quicksand">{list.li}</li>
                   ))}
                 </ul>
               </div>
@@ -344,7 +344,7 @@ const ServiceDetails = () => {
           {/* Sidebar Links (right side) */}
           <div className="hidden custom:block w-64 flex-shrink-0">
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">
+              <h3 className="text-lg font-bold mb-4 text-gray-800 font-quicksand border-b pb-2">
                 {t("careers.career")}
               </h3>
               <ul className="space-y-3">
@@ -360,7 +360,7 @@ const ServiceDetails = () => {
                         to={`/services/${encodeURIComponent(
                           link?.link?.toLowerCase().replace(/\s+/g, "-")
                         )}`}
-                        className={`flex items-center gap-x-2 transition-colors p-2 rounded ${
+                        className={`flex items-center gap-x-2 font-quicksand transition-colors p-2 rounded ${
                           isActive
                             ? "text-secondary bg-gray-100 font-medium"
                             : "text-gray-700 hover:text-secondary hover:bg-gray-100"
