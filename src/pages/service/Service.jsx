@@ -164,7 +164,7 @@ const Service = () => {
                     to={`/services/${encodeURIComponent(
                       service.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="text-2xl text-red-500 font-bold tracking-wide"
+                    className="text-2xl text-secondary font-bold tracking-wide"
                   >
                     {service.cardh1}
                   </Link>
@@ -173,7 +173,7 @@ const Service = () => {
                     to={`/services/${encodeURIComponent(
                       service.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="px-4 py-2 border border-gray-300 hover:bg-red-500 uppercase hover:text-white text-lg font-semibold flex items-center gap-x-3"
+                    className="px-4 py-2 border border-gray-300 hover:bg-blue uppercase hover:text-white text-lg font-semibold flex items-center gap-x-3"
                   >
                     {service.btn} <MdArrowForwardIos />
                   </Link>
@@ -195,7 +195,7 @@ const Service = () => {
                       to={`/services/${encodeURIComponent(
                         link?.link?.toLowerCase().replace(/\s+/g, "-")
                       )}`}
-                      className="flex items-center gap-x-2 text-gray-700 hover:text-red-500 transition-colors p-2 hover:bg-gray-100 rounded"
+                      className="flex items-center gap-x-2 text-gray-700 font-quicksand hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
                     >
                       <MdArrowForwardIos className="text-xs" />
                       {link.cardh1}

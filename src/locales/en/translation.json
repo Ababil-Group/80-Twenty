@@ -293,8 +293,28 @@
     "vtext": "To become a key centre for job placement and recruitment for individuals and companies throughout the world. To be a recognised partner, known for the quality of service and responsible corporate behaviour.",
     "alink1": "Basic data",
     "alink2": "General terms",
-
-    "ap1":""
+    "link1": "About Us",
+    "link2": "Basic data",
+    "link3": "General terms",
+    "basicdata": {
+      "bdh1": "Concessum d.o.o. za posredovanje pri zapošljavanju i privremeno zapošljavanje",
+      "bdp1": "Prilaz Gjure Deželića 71, 10 000 Zagreb",
+      "bdh2": "Concessum poslovno savjetovanje d.o.o. za usluge",
+      "bdp2": "Concessum d.o.o. za posredovanje pri zapošljavanju i privremeno zapošljavanje"
+    },
+    "genareldata": {
+      "gdp1": "Web pages located at www.concessum.com are the property of the Concessum Ltd. for mediation in employment and affiliated companies.",
+      "gdp2": "By accessing the website www.concessum.com you agree to the Concessum Ltd. Website Terms and to their legal effects. Concessum Ltd. can at any time and without prior notice modify and/or expand the Website Terms and on that site publish thus altered Terms of Use. Please refrain from accessing the Internet sites of Concessum Ltd. unless you agree to the application of the Terms of Use.",
+      "gdp3": "Any use of www.concessum.com is subject to the following terms.",
+      "gdh1": "Limitation of Liability",
+      "gdh1p1": "All contents published on www.concessum.com can be used for personal and non-commercial purposes only. Contents may not be modified, copied, broadcast or transferred and distributed by any means without a written consent from Concessum Ltd. With reasonable efforts Concessum Ltd. will maintain www.concessum.com as a fully functional site and keep all the published information accurate, complete and reliable while bearing no responsibility for the occasional malfunction of the site and with no guarantee, whether expressed or implied, as to accuracy, truthfulness, reliability or completeness of any piece of data, material or information published.",
+      "gdh1p2": "The www.concessum.com site is accessed via Internet. Concessum Ltd. reserves the right to change any of the contents published on www.concessum.com at any time and without prior notice or announcement. Concessum Ltd. has furthermore no obligation to update written materials, products or services published on the website. Concessum Ltd. will not be liable for any direct or indirect, accidental, material or immaterial damage, losses or expenses resulting either from use or from the inability to use the Concessum Ltd. website",
+      "gdh2": "Copyright",
+      "gdh2p1": "Unless stated otherwise, the contents of this site are protected by copyright either owned by Concessum Ltd. and affiliated companies or licensed to Concessum Ltd. while owned by a third party. Concessum Ltd. also owns the copyright to editing, selecting and adapting of the contents at this site. Furthermore, the site contains trademarks and certain other intellectual property of Concessum Ltd. or affiliated companies or a third party. None of the contents at this site may be used without permission from Concessum Ltd.",
+      "gdh2p2": "Any infringement of the rights stated, whether intentional or unintentional, is a violation of the terms of use of the material from the web pages and is subject to material and criminal law.",
+      "gdh3": "Safety of Data",
+      "gdh3p1": "In order to secure the information on this site and make sure that the service is accessible to all users, Concessum Ltd. website applies software that keeps track of the visits and provides protection from unauthorized use or modification of data. However, each user of this web site should be aware of a certain degree of possibility for unauthorized persons or applications to bypass security measures, in which case Concessum Ltd. will not be liable for any direct or indirect, accidental, immaterial or material damage, loss or expenses."
+    }
   },
   "faqs": {
     "faq": "FAQ",

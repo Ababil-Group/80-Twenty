@@ -139,7 +139,7 @@ const HomePage = () => {
         style={{ backgroundImage: `url(${titleimge})` }}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-8 bg-black/30 py-5">
-          <h1 className="text-white font-semibold text-2xl md:text-3xl">
+          <h1 className="text-primary font-quicksand font-semibold text-2xl md:text-3xl">
             {t("herotext.headtext")}
           </h1>
           <p className="text-gray-100 text-sm custom:text-xl font-medium max-w-screen-md mx-auto text-center px-4">
@@ -160,13 +160,13 @@ const HomePage = () => {
               >
                 <div className="p-6 flex flex-col items-center justify-between h-[420px]">
                   <img src={card.image} alt="" className="" />
-                  <h3 className="text-xl font-bold text-red-600/80 text-center">
+                  <h3 className="text-xl font-bold text-blue text-center">
                     {card.heading}
                   </h3>
                   <p className="text-gray-600 mb-4 text-center">
                     {card.subheading}
                   </p>
-                  <button className="flex w-10/12 items-center justify-center text-gray-800 font-semibold text-lg px-6 py-2 rounded-sm transition-colors border border-gray-300 hover:bg-red-600/80 hover:text-white shadow-2xl uppercase">
+                  <button className="flex w-10/12 items-center justify-center text-gray-800 font-semibold text-lg px-6 py-2 rounded-sm transition-colors border border-gray-300 hover:bg-blue hover:text-white shadow-2xl uppercase">
                     {card.button}
                     <IoIosArrowForward className="ml-1" />
                   </button>
@@ -177,7 +177,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* login section */}
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };

@@ -110,7 +110,7 @@ const Carrer = () => {
                     to={`/career-advice/${encodeURIComponent(
                       career.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="text-2xl text-red-500 font-bold tracking-wide"
+                    className="text-2xl text-secondary font-bold tracking-wide"
                   >
                     {career.cardh1}
                   </Link>
@@ -119,7 +119,7 @@ const Carrer = () => {
                     to={`/career-advice/${encodeURIComponent(
                       career.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="px-4 py-2 border border-gray-300 hover:bg-red-500 uppercase hover:text-white text-lg font-semibold flex items-center gap-x-3"
+                    className="px-4 py-2 border border-gray-300 hover:bg-blue rounded-md uppercase hover:text-white text-lg font-semibold flex items-center gap-x-3"
                   >
                     {career.btn} <MdArrowForwardIos />
                   </Link>
@@ -141,7 +141,7 @@ const Carrer = () => {
                       to={`/career-advice/${encodeURIComponent(
                         link.link.toLowerCase().replace(/\s+/g, "-")
                       )}`}
-                      className="flex items-center gap-x-2 text-gray-700 hover:text-red-500 transition-colors p-2 hover:bg-gray-100 rounded"
+                      className="flex items-center gap-x-2 text-gray-700 hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
                     >
                       <MdArrowForwardIos className="text-xs" />
                       {link.cardh1}
@@ -153,7 +153,7 @@ const Carrer = () => {
           </div>
         </div>
       </section>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };

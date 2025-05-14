@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import titleimge from "../../assets/home/title_bg.jpg";
 import {
   FaFacebook,
-  FaFileUpload,
   FaGooglePlus,
   FaShareAlt,
   FaTwitterSquare,
@@ -62,8 +61,8 @@ const Clients = () => {
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
           <p className="text-gray-700">{t("clients.cp1")}</p>
         </div>
-        {/* from */}
-        <form className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
+
+        {/* <form className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
           <h2 className="text-2xl font-bold text-gray-600">
             {t("candidate.from")}
           </h2>
@@ -176,7 +175,7 @@ const Clients = () => {
             <textarea
               type="text"
               required
-              placeholder={t("clients.message")} 
+              placeholder={t("clients.message")}
               className="h-30 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
             />
           </div>
@@ -190,9 +189,9 @@ const Clients = () => {
           <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
             {t("candidate.register")} <BsArrowRight />
           </button>
-        </form>
+        </form> */}
       </div>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };

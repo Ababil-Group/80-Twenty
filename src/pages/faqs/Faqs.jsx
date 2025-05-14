@@ -84,7 +84,7 @@ const Faqs = () => {
           <div className="hidden custom:block w-64 flex-shrink-0"></div>
         </div>
       </section>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };

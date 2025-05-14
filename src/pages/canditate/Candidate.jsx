@@ -55,7 +55,7 @@ const Candidate = () => {
           <p className="text-gray-700">{t("candidate.p3")}</p>
         </div>
         {/* from */}
-        <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
+        {/* <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
           <h2 className="text-2xl font-bold text-gray-600">
             {t("candidate.from")}
           </h2>
@@ -167,9 +167,9 @@ const Candidate = () => {
           <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
             {t("candidate.register")} <BsArrowRight />
           </button>
-        </div>
+        </div> */}
       </div>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };

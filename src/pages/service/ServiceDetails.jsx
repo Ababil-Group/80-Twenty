@@ -362,8 +362,8 @@ const ServiceDetails = () => {
                         )}`}
                         className={`flex items-center gap-x-2 transition-colors p-2 rounded ${
                           isActive
-                            ? "text-red-500 bg-gray-100 font-medium"
-                            : "text-gray-700 hover:text-red-500 hover:bg-gray-100"
+                            ? "text-secondary bg-gray-100 font-medium"
+                            : "text-gray-700 hover:text-secondary hover:bg-gray-100"
                         }`}
                       >
                         <MdArrowForwardIos className="text-xs" />
@@ -377,7 +377,7 @@ const ServiceDetails = () => {
           </div>
         </div>
       </section>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };
