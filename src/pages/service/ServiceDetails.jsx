@@ -210,9 +210,20 @@ const ServiceDetails = () => {
       cardTitle: t("services.cardh8"),
       section1: {
         paragraphs: [
-          { p: t("serviceDetailes.sdph1") },
-          { p: t("serviceDetailes.sdph2") },
-          { p: t("serviceDetailes.sdph3") },
+          { p: t("serviceDetailes.sdphp1") },
+          { p: t("serviceDetailes.sdphp2") },
+          
+        ],
+        listTile: t("serviceDetailes.sdphlp3"),
+        list: [
+          { li: t("serviceDetailes.sdphl1") },
+          { li: t("serviceDetailes.sdphl2") },
+          { li: t("serviceDetailes.sdphl3") },
+          { li: t("serviceDetailes.sdphl4") },
+          { li: t("serviceDetailes.sdphl5") },
+          { li: t("serviceDetailes.sdphl6") },
+          { li: t("serviceDetailes.sdphl7") },
+          { li: t("serviceDetailes.sdphl8") },
         ],
       },
     },
@@ -291,7 +302,7 @@ const ServiceDetails = () => {
                 </h2>
 
                 {service?.section1?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800 font-quicksand">
+                  <p key={inx} className="text-gray-800 text-lg font-quicksand">
                     {pra.p}
                   </p>
                 ))}
@@ -300,15 +311,21 @@ const ServiceDetails = () => {
                     <h2 className="text-lg text-gray-800 font-bold font-quicksand mt-6">
                       {service?.section1?.headTile1}
                     </h2>
-                    <p className="text-gray-800 font-quicksand">{service?.section1?.para1}</p>
+                    <p className="text-gray-800 font-quicksand text-lg">
+                      {service?.section1?.para1}
+                    </p>
                     <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
                       {service?.section1?.headTile2}
                     </h2>
-                    <p className="text-gray-800 font-quicksand">{service?.section1?.para2}</p>
+                    <p className="text-gray-800 font-quicksand">
+                      {service?.section1?.para2}
+                    </p>
                     <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
                       {service?.section1?.headTile3}
                     </h2>
-                    <p className="text-gray-800 font-quicksand">{service?.section1?.para3}</p>
+                    <p className="text-gray-800 text-lg font-quicksand">
+                      {service?.section1?.para3}
+                    </p>
                   </>
                 )}
 
@@ -316,7 +333,7 @@ const ServiceDetails = () => {
                   {service?.section1?.listTile}
                 </h2>
 
-                <ul className="text-gray-800 list-disc pl-5 font-quicksand space-y-2">
+                <ul className="text-gray-800 list-disc pl-5 font-quicksand text-lg space-y-2">
                   {service?.section1?.list?.map((list, idx) => (
                     <li key={idx}>{list.li}</li>
                   ))}
@@ -334,7 +351,9 @@ const ServiceDetails = () => {
 
                 <ul className="text-gray-800 list-disc pl-5 space-y-2">
                   {service?.section2?.list?.map((list, idx) => (
-                    <li key={idx} className="font-quicksand">{list.li}</li>
+                    <li key={idx} className="font-quicksand">
+                      {list.li}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -344,7 +363,7 @@ const ServiceDetails = () => {
           {/* Sidebar Links (right side) */}
           <div className="hidden custom:block w-64 flex-shrink-0">
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-bold mb-4 text-gray-800 font-quicksand border-b pb-2">
+              <h3 className="text-lg font-bold mb-4 text-gray-800 font-lato border-b pb-2">
                 {t("careers.career")}
               </h3>
               <ul className="space-y-3">
@@ -362,8 +381,8 @@ const ServiceDetails = () => {
                         )}`}
                         className={`flex items-center gap-x-2 font-quicksand transition-colors p-2 rounded ${
                           isActive
-                            ? "text-secondary bg-gray-100 font-medium"
-                            : "text-gray-700 hover:text-secondary hover:bg-gray-100"
+                            ? "text-secondary bg-gray-100 font-medium  "
+                            : "text-gray-900 hover:text-secondary hover:bg-gray-100"
                         }`}
                       >
                         <MdArrowForwardIos className="text-xs" />

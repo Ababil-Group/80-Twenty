@@ -154,7 +154,7 @@ const Header = () => {
               <li key={idx} className="relative group">
                 <Link
                   to={item.path}
-                  className={`font-semibold text-sm transition-colors font-quicksand uppercase ${
+                  className={`font-medium text-sm transition-colors font-inter uppercase ${
                     location.pathname === item.path
                       ? "text-secondary border-b-2 border-secondary"
                       : "text-gray-900 hover:text-secondary"
@@ -220,7 +220,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="fixed inset-0 z-40 md:hidden">
             <div
-              className="absolute inset-0 bg-gray-900 bg-opacity-75"
+              className="absolute inset-0 bg-gray-900/30 bg-opacity-75"
               onClick={() => setIsMenuOpen(false)}
             ></div>
 
@@ -244,7 +244,7 @@ const Header = () => {
                         {item.subNav ? (
                           <div>
                             <div
-                              className="flex justify-between items-center px-4 py-2 text-lg font-medium font-quicksand text-gray-800 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
+                              className="flex justify-between items-center px-4 py-2 text-lg font-inter font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
                               onClick={() => toggleSubMenu(idx)}
                             >
                               <span>{item.title}</span>

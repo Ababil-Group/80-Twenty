@@ -195,7 +195,7 @@ const Service = () => {
                       to={`/services/${encodeURIComponent(
                         link?.link?.toLowerCase().replace(/\s+/g, "-")
                       )}`}
-                      className="flex items-center gap-x-2 text-gray-700 font-quicksand hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
+                      className="flex items-center gap-x-2 text-gray-900 font-quicksand hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
                     >
                       <MdArrowForwardIos className="text-xs" />
                       {link.cardh1}
