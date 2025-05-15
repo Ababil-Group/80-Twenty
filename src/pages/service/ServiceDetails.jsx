@@ -229,7 +229,7 @@ const ServiceDetails = () => {
     },
     {
       id: 8,
-      images: s9,
+      images: [s9],
       link: t("services.link9"),
       cardTitle: t("services.cardh9"),
     },
@@ -238,7 +238,7 @@ const ServiceDetails = () => {
   const service = serverdata.find(
     (s) => s.link.toLowerCase().replace(/\s+/g, "-") === serviceId
   );
-  console.log("services", service);
+  // console.log("services", service);
   if (!service) {
     return <NotFoundPage />;
   }
