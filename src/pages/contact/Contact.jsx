@@ -17,6 +17,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Login from "../components/Login";
 import { MdArrowForwardIos } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
+import { FaLocationDot } from "react-icons/fa6";
 const Contact = () => {
   const { t } = useTranslation();
   const [showIcons, setShowIcons] = useState(false);
@@ -66,13 +67,38 @@ const Contact = () => {
         {/* from */}
         <form className="max-w-screen-custom grid grid-cols-1 sm:grid-cols-12 gap-4 px-2 md:px-0">
           <div className="col-span-4 space-y-6">
-            <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-              <p className="text-gray-700 text-xl font-semibold">
-                {t("contacts.cinfo")}
-              </p>
+            <div className="max-w-screen-custom space-y-2 px-2 md:px-0">
+              <div className=" text-center py-2 space-y-3">
+                <span className=" flex items-center gap-2">
+                  <FaLocationDot className="text-[#225EC3] size-5" />
+
+                  <p className="text-xl font-medium">
+                    {t("footer.locationname0")}
+                  </p>
+                </span>
+                <p className="">{t("footer.location1")}</p>
+              </div>
+              <div className="py-2 space-y-3">
+                <span className=" flex items-center gap-2">
+                  <FaLocationDot className="text-[#225EC3] size-5" />
+
+                  <p className="text-xl font-medium">
+                    {t("footer.locationname1")}
+                  </p>
+                </span>
+                <p className="">{t("footer.location2")}</p>
+              </div>
+              <div className=" py-2 space-y-3">
+                <span className=" flex items-center gap-2">
+                  <FaLocationDot className="text-[#225EC3] size-5" />
+                  <p className="text-xl font-medium">
+                    {t("footer.locationname2")}
+                  </p>
+                </span>
+                <p className="">{t("footer.location3")}</p>
+              </div>
             </div>
-            <p className="text-gray-700">{t("contacts.info")}</p>
-            <div>
+            {/* <div>
               <p className="text-gray-700 text-md font-semibold">
                 Tel:{" "}
                 <span className="text-red-400 text-sm hover:underline cursor-pointer">
@@ -97,7 +123,7 @@ const Contact = () => {
                   povratporeza@80twenty
                 </span>
               </p>{" "}
-            </div>
+            </div> */}
           </div>
           <div className="col-span-8 grid grid-cols-1 gap-2 ">
             <p className="text-gray-700 text-xl font-semibold">

@@ -38,8 +38,13 @@
     "loginbtn": "Login"
   },
   "footer": {
-    "heading": "80twenty",
-    "location": "80twenty for employment mediation and temporary employment |80twenty business consulting doo for services Ilica191c 10000 Zagreb , Croatia",
+    "heading": "Our Office",
+    "locationname0": "Romania:",
+    "location1": "HQ: Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239, Bloc C4, Ap. 71, Judet Prahova",
+    "locationname1": "New Zealand:",
+    "location2": "Level 1/3 Johnsonville Road, Johnsonville, Wellington 6037",
+    "locationname2": "Australia:",
+    "location3": "Level 25, 108 St Georges Terrace, Perth WA 6000",
     "tphone": "+385 1 4668 604",
     "mobile": "+385 1 617 1548",
     "email1": "info@80twenty.com",
@@ -58,7 +63,7 @@
     "develop": "Website development",
     "trem": "Terms of use",
     "sitemap": "Sitemap",
-    "copyright": "© 2015 | All Rights reserved. Concessum.com"
+    "copyright": "© 2015 | All Rights reserved. 80twenty.com"
   },
   "candidate": {
     "p1": "At Concessum, we provide personalized support to job seekers at every stage of the recruitment process—offering a free CV review, interview preparation with documentation guidance, relocation support for international roles, foreign language proficiency testing, and a pre-interview screening before you meet the employer. If no current openings match your profile, we’ll add you to our candidate database at no cost and reach out when a suitable opportunity arises. We also welcome proactive applications for advertised roles of interest.",
@@ -381,7 +386,7 @@
     "cinfo": "Contact info",
     "info": "80twenty for employment mediation and temporary employment |80twenty business consulting doo for services Ilica191c 10000 Zagreb , Croatia",
     "form": "Contact form",
-    "ordinary": "Koliko mjeseci ima godina? (unesite brojčanu vrijednost)",
+    "ordinary": "How many months are there in a year? (enter a numeric value)",
     "map": "Find us on the map",
     "uname": "name and surename",
     "email": "Your email",

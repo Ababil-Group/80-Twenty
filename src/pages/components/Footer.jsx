@@ -9,6 +9,7 @@ import {
   FaLocationDot,
   FaPhone,
   FaPlus,
+  FaTiktok,
   FaTwitter,
 } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
@@ -16,6 +17,9 @@ import { MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import footerimage from "../../assets/home/footerimg.png";
 import intenet from "../../assets/home/dimedia-logo.png";
+import { FaInstagramSquare } from "react-icons/fa";
+import { PiIntersectThree } from "react-icons/pi";
+import { SlSocialPintarest } from "react-icons/sl";
 const Footer = () => {
   const { t } = useTranslation();
   const navigation = [
@@ -32,13 +36,17 @@ const Footer = () => {
     <div className="bg-black/90 pt-6">
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 custom:grid-cols-12 items-center justify-center py-8 px-2 sm:px-0">
-          <div className="hidden custom:block col-span-5">
+          <div className="hidden custom:block col-span-4">
+            <h2 className="text-white/80 font-bold text-2xl mb-2">Menu</h2>
             <ul className="flex flex-col items-start gap-y-2">
               {navigation.map((item, indx) => (
                 <li key={indx} className="flex flex-col ">
                   <div className="flex items-center gap-x-2 group">
                     <span className="w-1.5 h-1.5 bg-gray-600 group-hover:bg-white/80"></span>
-                    <Link to={item.path} className="text-white hover:underline">
+                    <Link
+                      to={item.path}
+                      className="text-white/80 hover:underline"
+                    >
                       {item.title}
                     </Link>
                   </div>
@@ -47,15 +55,41 @@ const Footer = () => {
             </ul>
           </div>
           {/* contacts info*/}
-          <div className="col-span-3 space-y-4">
-            <h1 className="text-3xl font-bold uppercase tracking-wider text-white">
+          <div className="col-span-4 space-y-4 divide-y divide-gray-600">
+            <h1 className="text-3xl font-bold uppercase tracking-wider text-center py-2 text-white/80">
               {t("footer.heading")}
             </h1>
-            <div className="flex gap-x-2 text-white">
-              <FaLocationDot className="text-[#225EC3] size-5" />
-              <p className="text-white/80">{t("footer.location")}</p>
+            <div className=" text-center text-white/80 py-2 space-y-3">
+              <span className=" flex items-center justify-center gap-2">
+                <FaLocationDot className="text-[#225EC3] size-5" />
+
+                <p className="text-xl font-medium">
+                  {t("footer.locationname0")}
+                </p>
+              </span>
+              <p className="text-white/80">{t("footer.location1")}</p>
             </div>
-            <div className="flex gap-x-2 text-white">
+            <div className="text-center text-white/80 py-2 space-y-3">
+              <span className=" flex items-center justify-center gap-2">
+                <FaLocationDot className="text-[#225EC3] size-5" />
+
+                <p className="text-xl font-medium">
+                  {t("footer.locationname1")}
+                </p>
+              </span>
+              <p className="text-white/80">{t("footer.location2")}</p>
+            </div>
+            <div className="text-center text-white py-2 space-y-3">
+              <span className=" flex items-center justify-center gap-2">
+                <FaLocationDot className="text-[#225EC3] size-5" />
+
+                <p className="text-xl font-medium">
+                  {t("footer.locationname2")}
+                </p>
+              </span>
+              <p className="text-white/80">{t("footer.location3")}</p>
+            </div>
+            {/* <div className="flex gap-x-2 text-white">
               <FaPhone className="text-[#225EC3] size-5" />
               <p className="text-white/80">{t("footer.tphone")}</p>
             </div>
@@ -70,7 +104,7 @@ const Footer = () => {
             <div className="flex gap-x-2 text-white">
               <MdMail className="text-[#225EC3] size-5" />
               <p className="text-white/80">{t("footer.email2")}</p>
-            </div>
+            </div> */}
           </div>
 
           {/* contact */}
@@ -140,28 +174,42 @@ const Footer = () => {
         {/* icons */}
         <div className="py-4 flex-col flex custom:items-start flex-wrap  space-y-2">
           <div className="flex items-center flex-wrap justify-center gap-4 ">
-            <button className="bg-[#225EC3] px-5 h-10 text-white flex items-center gap-x-6 font-semibold rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] hover:-translate-y-2 transition-transform duration-500 cursor-pointer">
-              {t("footer.share")}{" "}
-              <span>
-                <FaPlus className="text-sm" />
-              </span>
-            </button>
-            <button className="bg-[#225EC3] px-3 h-10 text-white flex items-center gap-x-6 font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer">
+            <a
+              href="https://www.facebook.com/80twenty80"
+              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
               <FaFacebookF />
-            </button>
-            <button className="bg-[#225EC3] px-3 h-10 text-white flex items-center gap-x-6 font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer">
+            </a>
+            <a
+              href="https://www.linkedin.com/company/80-twenty"
+              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
               <FaLinkedinIn />
-            </button>
-            <button className="bg-[#225EC3] px-3 h-10 text-white flex items-center gap-x-6 font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer">
-              <FaGoogle />
-            </button>
-            <button className="bg-[#225EC3] px-3 h-10 text-white flex items-center gap-x-6 font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer">
+            </a>
+            <a
+              href="https://www.tiktok.com/@80twenty?lang=en"
+              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
+              <FaTiktok />
+            </a>
+            <a
+              href="https://x.com/80_twenty20"
+              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
               <FaTwitter />
-            </button>
-            <button className="bg-[#225EC3] px-3 h-10 text-white flex items-center gap-x-2 font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer">
-              <FaBlog />
-              BLOG
-            </button>
+            </a>
+            <a
+              href="https://www.instagram.com/80t.wenty/"
+              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
+              <FaInstagramSquare />
+            </a>
+            <a
+              href="https://www.pinterest.com/80twenty0323/"
+              className="bg-[#225EC3] px-3 h-10 text-white flex items-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+            >
+              <SlSocialPintarest />
+            </a>
           </div>
         </div>
       </div>
