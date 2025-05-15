@@ -88,13 +88,13 @@ const Contact = () => {
               <p className="text-gray-700 text-md font-semibold">
                 Email:{" "}
                 <span className="text-red-400 text-sm hover:underline cursor-pointer">
-                  info@concessum.com
+                  info@80twenty
                 </span>
               </p>
               <p className="text-gray-700 text-md font-semibold">
                 Email2:{" "}
                 <span className="text-red-400 text-sm hover:underline cursor-pointer">
-                  povratporeza@concessum.com
+                  povratporeza@80twenty
                 </span>
               </p>{" "}
             </div>
@@ -187,7 +187,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };
