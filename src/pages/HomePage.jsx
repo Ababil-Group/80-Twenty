@@ -4,17 +4,17 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import img1 from "../assets/home/img1.jpg";
-import img2 from "../assets/home/img2.jpg";
-import img3 from "../assets/home/img3.jpg";
+import img1 from "../assets/img/global-employers-worker.jpeg";
+import img2 from "../assets/img/h3.jpg";
+import img3 from "../assets/img/in-collaboration-with-reputable-agencies.jpg";
 import { MdNavigateNext, MdArrowForward } from "react-icons/md";
 import titleimge from "../assets/home/title_bg.jpg";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import logoimg1 from "../assets/home/logoimg1.png";
-import logoimg2 from "../assets/home/logoimg2.png";
-import logoimg3 from "../assets/home/logoimg3.png";
-import logoimg4 from "../assets/home/logoimg4.png";
+import logoimg1 from "../assets/img/Icons/i1.png";
+import logoimg2 from "../assets/img/Icons/i2.png";
+import logoimg3 from "../assets/img/Icons/i3.png";
+import logoimg4 from "../assets/img/Icons/i4.png";
 import { CgLogIn } from "react-icons/cg";
 import Login from "./components/Login";
 import { IoIosArrowForward } from "react-icons/io";
@@ -88,13 +88,13 @@ const HomePage = () => {
           >
             {slides.map((slide) => (
               <SwiperSlide key={slide.id}>
-                <div className="relative w-full h-full cursor-move">
+                <div className="relative w-full max-h-[80vh] cursor-move">
                   <img
                     src={slide.image}
                     alt={slide.alt}
-                    className="w-full h-full object-cover "
+                    className="w-full object-cover "
                   />
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center"></div>
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center"></div>
                 </div>
               </SwiperSlide>
             ))}
@@ -159,7 +159,7 @@ const HomePage = () => {
                 className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
               >
                 <div className="p-6 flex flex-col items-center justify-between h-[420px]">
-                  <img src={card.image} alt="" className="" />
+                  <img src={card.image} alt="" />
                   <h3 className="text-xl font-bold text-blue text-center">
                     {card.heading}
                   </h3>

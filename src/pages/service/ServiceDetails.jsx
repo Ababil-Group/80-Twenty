@@ -9,22 +9,23 @@ import {
   FaShareAlt,
   FaTwitterSquare,
 } from "react-icons/fa";
-import s1 from "../../assets/sevices/s1.jpg";
+import s1 from "../../assets/img/Service/s1.jpg";
 import sa1 from "../../assets/sevices/sa1.jpg";
-import s2 from "../../assets/sevices/s2.jpg";
+import s2 from "../../assets/img/Service/s2.jpg";
 import sa2 from "../../assets/sevices/sa2.jpg";
-import s3 from "../../assets/sevices/s3.jpg";
+import s3 from "../../assets/img/Service/s3.jpg";
 import sa3 from "../../assets/sevices/sa3.jpg";
-import s4 from "../../assets/sevices/s4.jpg";
+import s4 from "../../assets/img/Service/s4.jpg";
 import sa4 from "../../assets/sevices/sa4.jpg";
-import s5 from "../../assets/sevices/s5.jpg";
+import s5 from "../../assets/img/Service/s5.jpg";
 import sa5 from "../../assets/sevices/sa5.jpg";
-import s6 from "../../assets/sevices/s6.jpg";
+import s6 from "../../assets/img/Service/s6.jpeg";
 import sa6 from "../../assets/sevices/sa6.jpg";
-import s7 from "../../assets/sevices/s7.jpg";
+import s7 from "../../assets/img/Service/s7.jpg";
 import sa7 from "../../assets/sevices/sa7.jpg";
-import s8 from "../../assets/sevices/s8.jpg";
+import s8 from "../../assets/img/Service/s8.jpg";
 import sa8 from "../../assets/sevices/sa8.jpg";
+import s9 from "../../assets/img/Service/s9.jpg";
 import { Link } from "react-router-dom";
 import Login from "../components/Login";
 import { ImMail } from "react-icons/im";
@@ -212,7 +213,6 @@ const ServiceDetails = () => {
         paragraphs: [
           { p: t("serviceDetailes.sdphp1") },
           { p: t("serviceDetailes.sdphp2") },
-          
         ],
         listTile: t("serviceDetailes.sdphlp3"),
         list: [
@@ -229,7 +229,7 @@ const ServiceDetails = () => {
     },
     {
       id: 8,
-      images: [],
+      images: s9,
       link: t("services.link9"),
       cardTitle: t("services.cardh9"),
     },

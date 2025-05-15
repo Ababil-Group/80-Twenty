@@ -8,14 +8,15 @@ import {
   FaShareAlt,
   FaTwitterSquare,
 } from "react-icons/fa";
-import s1 from "../../assets/sevices/s1.jpg";
-import s2 from "../../assets/sevices/s2.jpg";
-import s3 from "../../assets/sevices/s3.jpg";
-import s4 from "../../assets/sevices/s4.jpg";
-import s5 from "../../assets/sevices/s5.jpg";
-import s6 from "../../assets/sevices/s6.jpg";
-import s7 from "../../assets/sevices/s7.jpg";
-import s8 from "../../assets/sevices/s8.jpg";
+import s1 from "../../assets/img/Service/s1.jpg";
+import s2 from "../../assets/img/Service/s2.jpg";
+import s3 from "../../assets/img/Service/s3.jpg";
+import s4 from "../../assets/img/Service/s4.jpg";
+import s5 from "../../assets/img/Service/s5.jpg";
+import s6 from "../../assets/img/Service/s6.jpeg";
+import s7 from "../../assets/img/Service/s7.jpg";
+import s8 from "../../assets/img/Service/s8.jpg";
+import s9 from "../../assets/img/Service/s9.jpg";
 import { Link } from "react-router-dom";
 import { ImMail } from "react-icons/im";
 const Service = () => {
@@ -89,14 +90,13 @@ const Service = () => {
     },
     {
       id: 8,
-      img: "",
+      img: s9,
       link: t("services.link9"),
       cardh1: t("services.cardh9"),
       chardp1: t("services.cardp9"),
       btn: t("services.cardbtn"),
     },
   ];
-
 
   return (
     <div className="bg-white/90">

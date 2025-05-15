@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import c1 from "../../assets/career/c1.jpg";
-import c2 from "../../assets/career/c2.jpg";
-import c3 from "../../assets/career/c3.jpg";
-import c4 from "../../assets/career/c4.jpg";
+import c2 from "../../assets/img/Career Tips/attending-the-interview.jpg";
+import c3 from "../../assets/img/Career Tips/education-and-training.jpg";
+import c4 from "../../assets/img/Career Tips/cover-letters-are-history.jpg";
 import titleimge from "../../assets/home/title_bg.jpg";
 import { Link } from "react-router-dom";
 import {
