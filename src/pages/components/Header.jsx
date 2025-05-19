@@ -79,9 +79,10 @@ const Header = () => {
         },
       ],
     },
-    { title: t("menu.candidates"), path: "/candidates" },
-    { title: t("menu.clients"), path: "/clients" },
-    { title: t("menu.career"), path: "/career-advice" },
+    { title: t("menu.candidates"), path: "/jobs-for-candidates" },
+    { title: t("menu.clients"), path: "/hiring-for-employers" },
+
+    { title: t("menu.career"), path: "/career-tips" },
     { title: t("menu.about"), path: "/about-us" },
     { title: t("menu.faq"), path: "/faqs" },
     { title: t("menu.contact"), path: "/contact" },
@@ -114,7 +115,7 @@ const Header = () => {
             <Link
               key={index}
               to={item.link}
-               target="_blank"
+              target="_blank"
               className={`flex items-center px-3 py-1 hover:translate-y-1 transition-transform duration-500 text-blue ${
                 index !== 0 ? "border-l border-gray-200" : ""
               }`}

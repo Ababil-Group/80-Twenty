@@ -153,15 +153,15 @@ function App() {
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/candidates" element={<Candidate />} />
+          <Route path="/jobs-for-candidates" element={<Candidate />} />
           <Route path="/services" element={<Service />} />
           <Route path="/services/:serviceId" element={<ServiceDetails />} />
-          <Route path="/career-advice" element={<Carrer />} />
+          <Route path="/career-tips" element={<Carrer />} />
           <Route path="/career-advice/:cId" element={<CarrierDetails />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/about-us/:cId" element={<AboutDetails />} />
           <Route path="/faqs" element={<Faqs />} />
-          <Route path="/clients" element={<Clients />} />
+          <Route path="/hiring-for-employers" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

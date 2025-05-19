@@ -78,8 +78,8 @@
     "password": "Password",
     "birth": "Birth date",
     "cv": "CV upload",
-    "size": "Max. document size is 1 MB. Allowed formats (extensions): PDF, DOC, DOCX",
-    "condition": "I agree that my personal information is used to process my inquiries and to deal with them in accordance with the regulations on personal data protection. I agree that these same data will be stored electronically in the form of data or information. I am familiar with the fact that this consent can be withdrawn at any time by express written request. By continuing, I agree that the 80 Twenty representatives contact me via e-mail or phone (including automatic dialing systems) at the indicated email address or telephone number for marketing purposes.",
+    "size": "Max file size: 1MB. Accepted formats: PDF, DOC, DOCX",
+    "condition": "I agree that my personal data will be used for processing this inquiry in accordance with personal data protection laws. I understand my data will be stored electronically and that I may withdraw my consent at any time by submitting a written request. I also agree to be contacted by Concessum representatives via email or phone (including automated systems) for marketing purposes.",
     "register": "Register"
   },
   "services": {

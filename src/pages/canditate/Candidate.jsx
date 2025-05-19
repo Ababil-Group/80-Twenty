@@ -15,6 +15,15 @@ import Login from "../components/Login";
 const Candidate = () => {
   const { t } = useTranslation();
   const [showIcons, setShowIcons] = useState(false);
+  const [fileName, setFileName] = useState("");
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFileName(file.name);
+    } else {
+      setFileName("");
+    }
+  };
   return (
     <div className="bg-white/90">
       <div
@@ -55,7 +64,7 @@ const Candidate = () => {
           <p className="text-gray-700">{t("candidate.p3")}</p>
         </div>
         {/* from */}
-        {/* <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
+        <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
           <h2 className="text-2xl font-bold text-gray-600">
             {t("candidate.from")}
           </h2>
@@ -141,9 +150,16 @@ const Candidate = () => {
           </div>
           <div className="border-b border-gray-200"></div>
           <div className="py-4">
-            <div className="xs:flex items-center  gap-x-1.5">
+            <div className="xs:flex items-center gap-x-1.5">
               <div className="relative w-42">
-                <input type="file" id="file" className="hidden" required />
+                <input
+                  type="file"
+                  id="file"
+                  className="hidden"
+                  required
+                  accept=".pdf"
+                  onChange={handleFileChange}
+                />
                 <label
                   htmlFor="file"
                   className="flex items-center gap-2 justify-center h-10 px-3 rounded-md border border-gray-300 bg-[#1046a3] text-gray-800 cursor-pointer hover:bg-[#225EC3]/90 shadow-md"
@@ -154,20 +170,32 @@ const Candidate = () => {
                   <FaFileUpload className="text-white text-xl" />
                 </label>
               </div>
-              <p className="text-gray-600">{t("candidate.size")}</p>
+
+              {fileName && (
+                <div className="mt-2 xs:mt-0 xs:ml-2">
+                  <span className="text-gray-700 font-medium">
+                    Selected file:{" "}
+                  </span>
+                  <span className="text-gray-600 truncate max-w-[200px] inline-block">
+                    {fileName}
+                  </span>
+                </div>
+              )}
+              <p className="text-gray-600 ml-2">{t("candidate.size")}</p>
             </div>
           </div>
           <div className="border-b border-gray-200"></div>
           <div className="py-4">
-            <div className="flex gap-x-2">
-              <input type="checkbox" className="w-7 h-7" />
-              <p>{t("candidate.condition")}</p>
+            <div className="flex items-center gap-x-2">
+              <input type="checkbox" className="w-5 h-5" />
+              <p className="text-lg font-semibold">Consent Checkbox:</p>
             </div>
+            <p className="text-gray-600">{t("candidate.condition")}</p>
           </div>
           <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
             {t("candidate.register")} <BsArrowRight />
           </button>
-        </div> */}
+        </div>
       </div>
       {/* <Login /> */}
     </div>
