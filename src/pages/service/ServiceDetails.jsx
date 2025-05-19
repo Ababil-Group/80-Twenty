@@ -80,7 +80,7 @@ const ServiceDetails = () => {
         paragraphs: [
           { p: t("serviceDetailes.sdpb1") },
           { p: t("serviceDetailes.sdpb2") },
-          { p: t("serviceDetailes.sdpb3") },
+          // { p: t("serviceDetailes.sdpb3") },
         ],
         listTile: t("serviceDetailes.sdlhb1"),
         list: [

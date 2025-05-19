@@ -144,10 +144,10 @@ const Service = () => {
         <div className="flex flex-col custom:flex-row gap-8">
           {/* Main Content (left side) */}
           <div className="flex-1 space-y-3 text-gray-800">
-            <p>{t("services.sp1")}</p>
+            {/* <p>{t("services.sp1")}</p>
             <p>{t("services.sp2")}</p>
             <p>{t("services.sp3")}</p>
-            <p>{t("services.sp4")}</p>
+            <p>{t("services.sp4")}</p> */}
             {/* In your Service.js component */}
             {serverdata.map((service, ind) => (
               <div
