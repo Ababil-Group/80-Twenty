@@ -59,9 +59,9 @@ const Candidate = () => {
       </div>
       <div className="max-w-screen-xl mx-auto py-6">
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700">{t("candidate.p1")}</p>
-          <p className="text-gray-700">{t("candidate.p2")}</p>
-          <p className="text-gray-700">{t("candidate.p3")}</p>
+          <p className="text-gray-700 text-lg font-quicksand">{t("candidate.p1")}</p>
+          <p className="text-gray-700 text-lg font-quicksand">{t("candidate.p2")}</p>
+          {/* <p className="text-gray-700">{t("candidate.p3")}</p> */}
         </div>
         {/* from */}
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
@@ -190,7 +190,7 @@ const Candidate = () => {
               <input type="checkbox" className="w-5 h-5" />
               <p className="text-lg font-semibold">Consent Checkbox:</p>
             </div>
-            <p className="text-gray-600">{t("candidate.condition")}</p>
+            <p className="text-gray-600 text-lg font-quicksand">{t("candidate.condition")}</p>
           </div>
           <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
             {t("candidate.register")} <BsArrowRight />

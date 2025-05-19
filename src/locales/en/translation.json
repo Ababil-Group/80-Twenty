@@ -66,17 +66,17 @@
     "copyright": "© 2015 | All Rights reserved. 80twenty.com"
   },
   "candidate": {
-    "p1": "At 80 Twenty, we provide personalized support to job seekers at every stage of the recruitment process—offering a free CV review, interview preparation with documentation guidance, relocation support for international roles, foreign language proficiency testing, and a pre-interview screening before you meet the employer. If no current openings match your profile, we’ll add you to our candidate database at no cost and reach out when a suitable opportunity arises. We also welcome proactive applications for advertised roles of interest.",
+    "p1": "At 80 Twenty, we provide personalized support to job seekers at every stage of the recruitment process offering a free CV review, interview preparation with documentation guidance, relocation support for international roles, foreign language proficiency testing, and a pre-interview screening before you meet the employer. If no current openings match your profile, we’ll add you to our candidate database at no cost and reach out when a suitable opportunity arises. We also welcome proactive applications for advertised roles of interest.",
     "p2": "Additionally, we offer optional services including visa and work permit assistance, tax refund support, professional document translation and certification by a court interpreter, as well as CV writing and editing.",
     "p3": "The candiates are encouraged to contact the agency by their own initiative in case they see the advertisement for the position comliant with their qualifications.If needed, the candiates can order other optional services like visa and work permit application,tax refund,document translation by court interpretor,writing CV..etc.",
     "from": "From",
-    "inputname": "Your name and surename",
-    "inputphone": "Phone number",
-    "inputeamil": "Your email",
-    "profession": "Profession",
+    "inputname": "Full Name",
+    "inputphone": "Phone Number",
+    "inputeamil": "Email Address",
+    "profession": "Area of Interest",
     "username": "Username",
     "password": "Password",
-    "birth": "Birth date",
+    "birth": "Date of Birth",
     "cv": "CV upload",
     "size": "Max file size: 1MB. Accepted formats: PDF, DOC, DOCX",
     "condition": "I agree that my personal data will be used for processing this inquiry in accordance with personal data protection laws. I understand my data will be stored electronically and that I may withdraw my consent at any time by submitting a written request. I also agree to be contacted by Concessum representatives via email or phone (including automated systems) for marketing purposes.",
@@ -366,7 +366,7 @@
     "feedback": "THESE ANSWERS ARE GENERAL AND EACH PARTICULAR OFFER MAY BE ACCOMPANIED BY DIFFERENT CONDITIONS."
   },
   "clients": {
-    "client": "Client",
+    "client": "For clients",
     "cp1": "80 Twenty collaborates successfully with employers across Europe and beyond to recruit and hire qualified candidates. We also offer a range of client-focused services, including temporary employment solutions, outsourcing, payroll and administrative support, labor market research, and assistance with obtaining visas and work permits",
     "uname": "Username",
     "email": "Your email",

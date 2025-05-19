@@ -155,11 +155,11 @@ const CarrierDetails = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 font-bold uppercase font-quicksand">
                 {t("services.service")}
               </h2>
               <MdArrowForwardIos />
-              <h1 className="text-white/80 font-bold uppercase">
+              <h1 className="text-white/80 font-bold uppercase font-quicksand">
                 {career.cardTitle}
               </h1>
             </div>
@@ -201,15 +201,15 @@ const CarrierDetails = () => {
               </div>
               <div className="flex flex-col items-start space-y-6 mt-6">
                 {career?.section1?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800">
+                  <p key={inx} className="text-gray-800 text-lg font-quicksand">
                     {pra.p}
                   </p>
                 ))}
-                <h2 className="text-lg text-gray-800 font-bold mt-6">
+                <h2 className="text-lg text-gray-800 font-bold mt-6 font-quicksand">
                   {career?.section1?.listTile}
                 </h2>
 
-                <ul className="text-gray-800 list-disc pl-5 space-y-2">
+                <ul className="text-gray-800 list-disc pl-5 space-y-2 font-quicksand">
                   {career?.section1?.list?.map((list, idx) => (
                     <li key={idx}>{list.li}</li>
                   ))}
@@ -217,11 +217,11 @@ const CarrierDetails = () => {
 
                 {career?.section2 && (
                   <>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <h2 className="text-lg text-gray-800 font-bold mt-6 font-quicksand">
                       {career?.section2?.listTile}
                     </h2>
 
-                    <ul className="text-gray-800 list-disc pl-5 space-y-2">
+                    <ul className="text-gray-800 list-disc pl-5 space-y-2 font-quicksand">
                       {career?.section2?.list?.map((list, idx) => (
                         <li key={idx}>{list.li}</li>
                       ))}
@@ -230,11 +230,11 @@ const CarrierDetails = () => {
                 )}
                 {career?.section3 && (
                   <>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <h2 className="text-lg text-gray-800 font-bold mt-6 font-quicksand">
                       {career?.section3?.listTile}
                     </h2>
 
-                    <ul className="text-gray-800 list-disc pl-5 space-y-2">
+                    <ul className="text-gray-800 list-disc pl-5 space-y-2 font-quicksand">
                       {career?.section3?.list?.map((list, idx) => (
                         <li key={idx}>{list.li}</li>
                       ))}
@@ -244,11 +244,11 @@ const CarrierDetails = () => {
 
                 {career?.section4 && (
                   <>
-                    <h2 className="text-lg text-gray-800 font-bold mt-6">
+                    <h2 className="text-lg text-gray-800 font-bold mt-6 font-quicksand">
                       {career?.section4?.listTile}
                     </h2>
 
-                    <ul className="text-gray-800 list-disc pl-5 space-y-2">
+                    <ul className="text-gray-800 list-disc pl-5 space-y-2 font-quicksand">
                       {career?.section4?.list?.map((list, idx) => (
                         <li key={idx}>{list.li}</li>
                       ))}
@@ -257,7 +257,7 @@ const CarrierDetails = () => {
                 )}
 
                 {career?.section4?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800">
+                  <p key={inx} className="text-gray-800 font-quicksand">
                     {pra.p}
                   </p>
                 ))}
@@ -268,7 +268,7 @@ const CarrierDetails = () => {
           {/* Sidebar Links (right side) */}
           <div className="hidden custom:block w-64 flex-shrink-0">
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
-              <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">
+              <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2 font-quicksand">
                 {t("careers.career")}
               </h3>
               <ul className="space-y-3">

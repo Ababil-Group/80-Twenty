@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import titleimge from "../../assets/home/title_bg.jpg";
 import {
@@ -59,7 +59,7 @@ const Clients = () => {
       </div>
       <div className="max-w-screen-xl mx-auto py-6">
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700">{t("clients.cp1")}</p>
+          <p className="text-gray-700">{t("clients.cp1")}.</p>
         </div>
 
         {/* <form className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
