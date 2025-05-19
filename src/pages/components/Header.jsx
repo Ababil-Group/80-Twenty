@@ -154,7 +154,7 @@ const Header = () => {
               <li key={idx} className="relative group">
                 <Link
                   to={item.path}
-                  className={`font-medium text-sm transition-colors font-inter uppercase ${
+                  className={`font-semibold text-sm transition-colors uppercase tracking-widest font-quicksand ${
                     location.pathname === item.path
                       ? "text-secondary border-b-2 border-secondary"
                       : "text-gray-900 hover:text-secondary"

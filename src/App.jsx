@@ -177,7 +177,7 @@ function App() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaArrowUp className="w-5 h-5 text-blue-dark hover:text-white animate-bounce" />
+          <FaArrowUp className="w-5 h-5 text-blue-dark hover:text-blue animate-bounce" />
         </motion.button>
       )}
     </>

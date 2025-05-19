@@ -176,37 +176,43 @@ const Footer = () => {
           <div className="flex items-center flex-wrap justify-center gap-4 ">
             <a
               href="https://www.facebook.com/80twenty80"
-              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center justify-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <FaFacebookF />
             </a>
             <a
               href="https://www.linkedin.com/company/80-twenty"
-              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center justify-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <FaLinkedinIn />
             </a>
             <a
               href="https://www.tiktok.com/@80twenty?lang=en"
-              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center justify-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <FaTiktok />
             </a>
             <a
               href="https://x.com/80_twenty20"
-              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center justify-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <FaTwitter />
             </a>
             <a
               href="https://www.instagram.com/80t.wenty/"
-              className="bg-[#225EC3] px-3 h-10 text-white font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center justify-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <FaInstagramSquare />
             </a>
             <a
               href="https://www.pinterest.com/80twenty0323/"
-              className="bg-[#225EC3] px-3 h-10 text-white flex items-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
+              target="_blank"
+              className="bg-[#225EC3] p-1 h-8 w-8 text-white flex items-center font-semibold hover:-translate-y-2 transition-transform duration-500 rounded-sm text-xl hover:bg-white/90 hover:text-[#225EC3] cursor-pointer"
             >
               <SlSocialPintarest />
             </a>
