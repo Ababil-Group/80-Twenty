@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaPhone,
 } from "react-icons/fa6";
-import { FaTimes } from "react-icons/fa";
+import { FaInstagramSquare, FaTimes } from "react-icons/fa";
 
 import logo from "../../assets/80-twenty.png";
 import { Link, useLocation } from "react-router-dom";
@@ -91,30 +91,31 @@ const Header = () => {
     setOpenSubMenu(openSubMenu === index ? null : index);
   };
 
+  const linkIcon = [
+    { icon: <FaFacebookF />, link: "https://www.facebook.com/80twenty80" },
+    {
+      icon: <FaLinkedinIn />,
+      link: "https://www.linkedin.com/company/80-twenty",
+    },
+    {
+      icon: <FaInstagramSquare />,
+      link: "https://www.instagram.com/80t.wenty/",
+    },
+    { icon: <FaTwitter />, link: "https://x.com/80_twenty20" },
+  ];
+
   return (
     <nav
       className={`bg-white transition-shadow ${isScrolled ? "shadow-md" : ""}`}
     >
       <div className="hidden max-w-screen-xl mx-auto md:flex items-center justify-between px-4 lg:px-8 xl:px-0 py-2">
         <div className="flex items-center text-gray-800 border-l border-r border-gray-200">
-          {[
-            { icon: <FaFacebookF /> },
-            { icon: <FaLinkedinIn /> },
-            { icon: <FaGooglePlusG /> },
-            { icon: <FaTwitter /> },
-            {
-              icon: (
-                <>
-                  <FaPhone className="mr-2" />
-                  +385 1 4668 604
-                </>
-              ),
-            },
-          ].map((item, index) => (
+          {linkIcon.map((item, index) => (
             <Link
               key={index}
-              to="#"
-              className={`flex items-center px-3 py-1 hover:translate-y-1 transition-transform duration-500 ${
+              to={item.link}
+               target="_blank"
+              className={`flex items-center px-3 py-1 hover:translate-y-1 transition-transform duration-500 text-blue ${
                 index !== 0 ? "border-l border-gray-200" : ""
               }`}
             >
