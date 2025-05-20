@@ -59,7 +59,7 @@ const Carrer = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {t("careers.career")}
               </h2>
             </div>
@@ -110,7 +110,7 @@ const Carrer = () => {
                     to={`/career-advice/${encodeURIComponent(
                       career.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="text-2xl text-secondary font-bold tracking-wide"
+                    className="text-2xl text-secondary border-b-4 pb-1 border-amber-500 font-bold tracking-wide"
                   >
                     {career.cardh1}
                   </Link>

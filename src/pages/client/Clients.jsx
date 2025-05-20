@@ -26,7 +26,7 @@ const Clients = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {t("clients.client")}
               </h2>
             </div>
@@ -59,7 +59,7 @@ const Clients = () => {
       </div>
       <div className="max-w-screen-xl mx-auto py-6">
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700">{t("clients.cp1")}.</p>
+          <p className="text-gray-700 font-quicksand">{t("clients.cp1")}.</p>
         </div>
 
         {/* <form className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">

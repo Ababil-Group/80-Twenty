@@ -155,11 +155,11 @@ const CarrierDetails = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase font-quicksand">
+              <h2 className="text-white/80 font-bold uppercase text-xl md:text-2xl font-quicksand ">
                 {t("services.service")}
               </h2>
               <MdArrowForwardIos />
-              <h1 className="text-white/80 font-bold uppercase font-quicksand">
+              <h1 className="text-white/80 font-bold text-xl md:text-2xl uppercase font-quicksand">
                 {career.cardTitle}
               </h1>
             </div>

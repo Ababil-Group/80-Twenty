@@ -21,10 +21,10 @@ const About = () => {
       link: t("abouts.link1"),
       cardh1: t("abouts.about-us"),
     },
-    {
-      link: t("abouts.link2"),
-      cardh1: t("abouts.alink1"),
-    },
+    // {
+    //   link: t("abouts.link2"),
+    //   cardh1: t("abouts.alink1"),
+    // },
     {
       link: t("abouts.link3"),
       cardh1: t("abouts.alink2"),
@@ -42,7 +42,7 @@ const About = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {t("abouts.about-us")}
               </h2>
             </div>

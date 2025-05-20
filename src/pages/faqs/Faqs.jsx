@@ -18,7 +18,7 @@ const Faqs = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">{t("faqs.faq")}</h2>
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">{t("faqs.faq")}</h2>
             </div>
             <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
               <button
@@ -51,8 +51,8 @@ const Faqs = () => {
       <section className="max-w-screen-xl mx-auto py-6 px-4">
         <div className="flex flex-col custom:flex-row gap-8">
           {/* Main Content (left side) */}
-          <div className="flex-1 space-y-3 text-gray-800">
-            <h2 className="text-md font-bold">{t("faqs.fh1")}</h2>
+          <div className="flex-1 space-y-3 text-gray-800 font-quicksand">
+            <h2 className="text-md font-bold ">{t("faqs.fh1")}</h2>
             <p>{t("faqs.fp1")}</p>
             <h2 className="text-md font-bold">{t("faqs.fh2")}</h2>
             <p>{t("faqs.fp2")}</p>

@@ -26,14 +26,14 @@ const AboutDetails = () => {
       cardh2: t("abouts.visstion"),
       cardh2p: t("abouts.vtext"),
     },
-    {
-      link: t("abouts.link2"),
-      cardTitle: t("abouts.alink1"),
-      cardh1: t("abouts.basicdata.bdh1"),
-      cardh1p1: t("abouts.basicdata.bdp1"),
-      cardh2: t("abouts.basicdata.bdh2"),
-      cardh2p2: t("abouts.basicdata.bdp1"),
-    },
+    // {
+    //   link: t("abouts.link2"),
+    //   cardTitle: t("abouts.alink1"),
+    //   cardh1: t("abouts.basicdata.bdh1"),
+    //   cardh1p1: t("abouts.basicdata.bdp1"),
+    //   cardh2: t("abouts.basicdata.bdh2"),
+    //   cardh2p2: t("abouts.basicdata.bdp1"),
+    // },
     {
       link: t("abouts.link3"),
       cardTitle: t("abouts.alink2"),
@@ -72,11 +72,11 @@ const AboutDetails = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {t("abouts.about-us")}
               </h2>
               <MdArrowForwardIos />
-              <h1 className="text-white/80 font-bold uppercase">
+              <h1 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {about.cardTitle}
               </h1>
             </div>

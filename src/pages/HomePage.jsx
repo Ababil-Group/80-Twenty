@@ -160,13 +160,13 @@ const HomePage = () => {
               >
                 <div className="p-6 flex flex-col items-center justify-between h-[420px]">
                   <img src={card.image} alt="" />
-                  <h3 className="text-xl font-bold text-blue text-center">
+                  <h3 className="text-xl font-bold text-blue font-quicksand text-center">
                     {card.heading}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-center">
+                  <p className="text-gray-600 mb-4 font-quicksand text-center">
                     {card.subheading}
                   </p>
-                  <button className="flex w-10/12 items-center justify-center text-gray-800 font-semibold text-lg px-6 py-2 rounded-sm transition-colors border border-gray-300 hover:bg-blue hover:text-white shadow-2xl uppercase">
+                  <button className="flex w-10/12 items-center font-quicksand justify-center text-gray-800 font-semibold text-lg px-6 py-2 rounded-sm transition-colors border border-gray-300 hover:bg-blue hover:text-white shadow-2xl uppercase">
                     {card.button}
                     <IoIosArrowForward className="ml-1" />
                   </button>
