@@ -1,5 +1,5 @@
 {
-  "name": "concessum",
+  "name": "80-twenty",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/vite": "^4.0.15",
-    "framer-motion": "^12.11.1",
+    "framer-motion": "^12.12.1",
     "i18next": "^24.2.3",
     "leaflet": "^1.9.4",
     "nprogress": "^0.2.0",

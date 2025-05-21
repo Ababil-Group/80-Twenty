@@ -19,10 +19,63 @@ import s8 from "../../assets/img/Service/s8.jpg";
 import s9 from "../../assets/img/Service/s9.jpg";
 import { Link } from "react-router-dom";
 import { ImMail } from "react-icons/im";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Service = () => {
   const { t } = useTranslation();
   const [showIcons, setShowIcons] = useState(false);
+  const { scrollYProgress } = useScroll();
 
+  // Parallax effects
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each child animation
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+  const slideUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  };
+
+  const scaleUp = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
   const serverdata = [
     {
       id: 0,
@@ -99,98 +152,127 @@ const Service = () => {
   ];
 
   return (
-    <div className="bg-white/90">
+    <div className="bg-white/90 overflow-hidden">
+      {/* Header with Parallax */}
       <div
         className="bg-cover bg-center"
-        style={{ backgroundImage: `url(${titleimge})` }}
+        style={{
+          backgroundImage: `url(${titleimge})`,
+        }}
       >
-        <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center justify-between">
+        <div className="max-w-screen-xl mx-auto h-full flex flex-col justify-center">
+          <div className="flex items-center justify-between py-14 relative pr-6 md:pr-0">
             <div className="flex items-center text-xl md:text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
               <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
                 {t("services.service")}
               </h2>
             </div>
-            <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
+
+            <div className="relative pr-6 md:pr-0">
               <button
                 className="flex items-end justify-end"
                 onClick={() => setShowIcons(!showIcons)}
               >
-                <FaShareAlt className="text-white text-xl cursor-pointer" />
+                <FaShareAlt className="text-white text-xl cursor-pointer hover:text-amber-300 transition-colors" />
               </button>
               {showIcons && (
-                <div className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2">
+                <motion.div
+                  className="bg-white/80 flex absolute top-10 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <a href="https://facebook.com" target="_blank">
-                    <FaFacebook className="text-blue-700 text-2xl" />
+                    <FaFacebook className="text-blue-700 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://twitter.com" target="_blank">
-                    <FaTwitterSquare className="text-blue-500 text-2xl" />
+                    <FaTwitterSquare className="text-blue-500 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://google.com" target="_blank">
-                    <FaGooglePlus className="text-amber-800 text-2xl" />
+                    <FaGooglePlus className="text-amber-800 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://mail.google.com/" target="_blank">
-                    <ImMail className="text-amber-950 text-2xl" />
+                    <ImMail className="text-amber-950 text-2xl hover:scale-110 transition-transform" />
                   </a>
-                </div>
+                </motion.div>
               )}
             </div>
           </div>
         </div>
       </div>
-      {/* card section */}
-      <section className="max-w-screen-xl mx-auto py-6 px-4">
+
+      {/* Card Section */}
+      <motion.section
+        className="max-w-screen-xl mx-auto py-6 px-4"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        variants={container}
+      >
         <div className="flex flex-col custom:flex-row gap-8">
           {/* Main Content (left side) */}
           <div className="flex-1 space-y-3 text-gray-800">
-            {/* <p>{t("services.sp1")}</p>
-            <p>{t("services.sp2")}</p>
-            <p>{t("services.sp3")}</p>
-            <p>{t("services.sp4")}</p> */}
-            {/* In your Service.js component */}
             {serverdata.map((service, ind) => (
-              <div
+              <motion.div
                 key={ind}
                 className="grid grid-cols-1 custom:grid-cols-2 gap-6 mt-16"
+                variants={item}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <img
+                <motion.img
                   src={service.img}
                   alt={service.chardp1}
                   className="bg-gray-300 border border-gray-200 rounded-sm object-cover h-full"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
                 />
                 <div className="flex flex-col items-start space-y-6">
                   <Link
                     to={`/services/${encodeURIComponent(
                       service.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="text-2xl text-secondary border-b-4 pb-1 border-amber-500 font-bold tracking-wide"
+                    className="text-2xl text-secondary border-b-4 pb-1 border-amber-500 font-bold tracking-wide hover:text-amber-600 transition-colors"
                   >
                     {service.cardh1}
                   </Link>
                   <p className="text-gray-800">{service.chardp1}</p>
-                  <Link
-                    to={`/services/${encodeURIComponent(
-                      service.link.toLowerCase().replace(/\s+/g, "-")
-                    )}`}
-                    className="px-4 py-2 border border-gray-300 hover:bg-amber-500 font-quicksand uppercase hover:text-gray-900 text-lg font-bold flex items-center gap-x-3"
-                  >
-                    {service.btn}... <MdArrowForwardIos />
-                  </Link>
+                  <motion.div whileHover={{ scale: 1.03 }}>
+                    <Link
+                      to={`/services/${encodeURIComponent(
+                        service.link.toLowerCase().replace(/\s+/g, "-")
+                      )}`}
+                      className="px-4 py-2 border border-gray-300 hover:bg-amber-500 font-quicksand uppercase hover:text-gray-900 text-lg font-bold flex items-center gap-x-3"
+                    >
+                      {service.btn}... <MdArrowForwardIos />
+                    </Link>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Sidebar Links (right side) */}
-          <div className="hidden custom:block w-64 flex-shrink-0">
+          <motion.div
+            className="hidden custom:block w-64 flex-shrink-0"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={scaleUp}
+          >
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">
                 {t("services.service")}
               </h3>
               <ul className="space-y-3">
                 {serverdata.map((link, index) => (
-                  <li key={index}>
+                  <motion.li
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <Link
                       to={`/services/${encodeURIComponent(
                         link?.link?.toLowerCase().replace(/\s+/g, "-")
@@ -200,13 +282,28 @@ const Service = () => {
                       <MdArrowForwardIos className="text-xs" />
                       {link.cardh1}
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Floating background elements */}
+      <motion.div
+        className="fixed top-0 left-0 w-full h-screen pointer-events-none -z-10"
+        style={{ opacity }}
+      >
+        <motion.div
+          className="absolute top-1/4 left-10 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-20"
+          style={{ y: y1 }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-10 w-40 h-40 bg-amber-200 rounded-full blur-3xl opacity-20"
+          style={{ y: y2 }}
+        />
+      </motion.div>
     </div>
   );
 };

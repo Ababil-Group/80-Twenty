@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { ImMail } from "react-icons/im";
 import { BsArrowRight } from "react-icons/bs";
 import Login from "../components/Login";
+import { MdArrowForwardIos } from "react-icons/md";
 const Candidate = () => {
   const { t } = useTranslation();
   const [showIcons, setShowIcons] = useState(false);
@@ -26,12 +27,18 @@ const Candidate = () => {
   };
   return (
     <div className="bg-white/90">
-      <div
-        className="bg-cover bg-center"
+      <div 
+        className="bg-cover bg-center "
         style={{ backgroundImage: `url(${titleimge})` }}
       >
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
+          <div className="flex items-center justify-between py-14 relative pr-6 md:pr-0">
+            <div className="flex items-center text-xl md:text-2xl gap-x-3 text-white/90">
+              <MdArrowForwardIos />
+              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
+                {t("candidate.candidate")}
+              </h2>
+            </div>
             <button
               className="flex items-end justify-end"
               onClick={() => setShowIcons(!showIcons)}
@@ -59,8 +66,12 @@ const Candidate = () => {
       </div>
       <div className="max-w-screen-xl mx-auto py-6">
         <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700 text-lg font-quicksand">{t("candidate.p1")}</p>
-          <p className="text-gray-700 text-lg font-quicksand">{t("candidate.p2")}</p>
+          <p className="text-gray-700 text-lg font-quicksand">
+            {t("candidate.p1")}
+          </p>
+          <p className="text-gray-700 text-lg font-quicksand">
+            {t("candidate.p2")}
+          </p>
           {/* <p className="text-gray-700">{t("candidate.p3")}</p> */}
         </div>
         {/* from */}
@@ -190,7 +201,9 @@ const Candidate = () => {
               <input type="checkbox" className="w-5 h-5" />
               <p className="text-lg font-semibold">Consent Checkbox:</p>
             </div>
-            <p className="text-gray-600 text-lg font-quicksand">{t("candidate.condition")}</p>
+            <p className="text-gray-600 text-lg font-quicksand">
+              {t("candidate.condition")}
+            </p>
           </div>
           <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
             {t("candidate.register")} <BsArrowRight />

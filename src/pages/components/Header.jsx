@@ -129,7 +129,7 @@ const Header = () => {
           {["HR", "EN"].map((lang) => (
             <button
               key={lang}
-              className={`px-3 py-1 hover:text-secondary ${
+              className={`px-3 py-1 hover:text-secondary cursor-pointer ${
                 lang === "EN" ? "border-l border-r border-gray-200" : ""
               } ${
                 i18n.language === lang.toLowerCase()
@@ -173,7 +173,7 @@ const Header = () => {
         <div className="md:hidden flex items-center space-x-4">
           <div className="flex">
             <button
-              className={`px-2 hover:text-secondary font-quicksand ${
+              className={`px-2 hover:text-secondary font-quicksand cursor-pointer ${
                 i18n.language === "hr"
                   ? "text-secondary font-bold"
                   : "text-gray-800"
@@ -194,11 +194,11 @@ const Header = () => {
             </button>
           </div>
           <button
-            className="text-gray-800 hover:text-red-600"
+            className="text-gray-800 hover:text-red-600 cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <FaTimes className="h-6 w-6" />
+              <FaTimes className="h-6 w-6 cursor-pointer" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +206,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-8 h-8 bg-primary text-white p-1 font-bold"
+                className="w-8 h-8 bg-primary text-white p-1 font-bold cursor-pointer"
               >
                 <path
                   strokeLinecap="round"
@@ -229,9 +229,17 @@ const Header = () => {
             <div className="absolute right-0 top-0 h-full w-5/5 max-w-full bg-gray-200 shadow-xl transform transition-transform duration-300 ease-in-out">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b border-gray-200">
-                  <img src={logo} width={130} height={60} alt="Company Logo" />
+                  <Link to="/">
+                    <img
+                      src={logo}
+                      width={130}
+                      height={60}
+                      alt="Company Logo "
+                      className="cursor-pointer"
+                    />
+                  </Link>
                   <button
-                    className="text-gray-800 hover:text-primary"
+                    className="text-gray-800 hover:text-primary cursor-pointer"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <FaTimes className="h-6 w-6" />

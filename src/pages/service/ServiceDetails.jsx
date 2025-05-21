@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import titleimge from "../../assets/home/title_bg.jpg";
 import { useTranslation } from "react-i18next";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -31,6 +32,41 @@ import Login from "../components/Login";
 import { ImMail } from "react-icons/im";
 import Carousel from "../components/Carousel";
 import NotFoundPage from "../components/NotFoundPage";
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.6 } },
+};
+
+const slideUp = {
+  hidden: { y: 50, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+};
 const ServiceDetails = () => {
   const { t } = useTranslation();
   const [showIcons, setShowIcons] = useState(false);
@@ -243,20 +279,29 @@ const ServiceDetails = () => {
     return <NotFoundPage />;
   }
   return (
-    <div className="bg-white/90">
-      <div
+    <motion.div
+      className="bg-white/90"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.div
         className="bg-cover bg-center"
         style={{ backgroundImage: `url(${titleimge})` }}
+        variants={fadeIn}
       >
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center justify-between">
+          <motion.div
+            className="flex items-center justify-between"
+            variants={itemVariants}
+          >
             <div className="flex items-center text-xl md:text-2xl font-quicksand gap-x-3 text-white/90">
               <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold uppercase">
+              <h2 className="text-white/80 text-lg md:text-2xl font-bold uppercase">
                 {t("services.service")}
               </h2>
               <MdArrowForwardIos />
-              <h1 className="text-white/80 text-xl md:text-2xl font-quicksand font-bold uppercase">
+              <h1 className="text-white/80 text-lg md:text-2xl font-quicksand font-bold uppercase">
                 {service.cardTitle}
               </h1>
             </div>
@@ -268,100 +313,178 @@ const ServiceDetails = () => {
                 <FaShareAlt className="text-white text-xl cursor-pointer" />
               </button>
               {showIcons && (
-                <div className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2">
+                <motion.div
+                  className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
                   <a href="https://facebook.com" target="_blank">
-                    <FaFacebook className="text-blue-700 text-2xl" />
+                    <FaFacebook className="text-blue-700 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://twitter.com" target="_blank">
-                    <FaTwitterSquare className="text-blue-500 text-2xl" />
+                    <FaTwitterSquare className="text-blue-500 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://google.com" target="_blank">
-                    <FaGooglePlus className="text-amber-800 text-2xl" />
+                    <FaGooglePlus className="text-amber-800 text-2xl hover:scale-110 transition-transform" />
                   </a>
                   <a href="https://mail.google.com/" target="_blank">
-                    <ImMail className="text-amber-950 text-2xl" />
+                    <ImMail className="text-amber-950 text-2xl hover:scale-110 transition-transform" />
                   </a>
-                </div>
+                </motion.div>
               )}
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
+
       {/* card section */}
       <section className="max-w-screen-xl mx-auto py-6 px-4">
-        <div className="flex flex-col custom:flex-row gap-8">
+        <motion.div
+          className="flex flex-col custom:flex-row gap-8"
+          variants={containerVariants}
+        >
           {/* Main Content (left side) */}
-          <div className="flex-1 space-y-3 text-gray-800">
+          <motion.div
+            className="flex-1 space-y-3 text-gray-800"
+            variants={containerVariants}
+          >
             <div className="flex flex-col">
-              <div className="mb-6">
+              <motion.div className="mb-6" variants={slideUp}>
                 <Carousel images={service.images} />
-              </div>
-              <div className="flex flex-col items-start space-y-6 mt-6">
-                <h2 className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide">
-                  {service?.section1?.heading ? service.section1.heading : ""}
-                </h2>
+              </motion.div>
+
+              <motion.div
+                className="flex flex-col items-start space-y-6 mt-6"
+                variants={containerVariants}
+              >
+                {service?.section1?.heading && (
+                  <motion.h2
+                    className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide"
+                    variants={itemVariants}
+                  >
+                    {service.section1.heading}
+                  </motion.h2>
+                )}
 
                 {service?.section1?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800 text-lg font-quicksand">
+                  <motion.p
+                    key={inx}
+                    className="text-gray-800 text-lg font-quicksand"
+                    variants={itemVariants}
+                  >
                     {pra.p}
-                  </p>
+                  </motion.p>
                 ))}
+
                 {service?.section1?.headTile1 && (
                   <>
-                    <h2 className="text-lg text-gray-800 font-bold font-quicksand mt-6">
+                    <motion.h2
+                      className="text-lg text-gray-800 font-bold font-quicksand mt-6"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.headTile1}
-                    </h2>
-                    <p className="text-gray-800 font-quicksand text-lg">
+                    </motion.h2>
+                    <motion.p
+                      className="text-gray-800 font-quicksand text-lg"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.para1}
-                    </p>
-                    <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
+                    </motion.p>
+                    <motion.h2
+                      className="text-lg text-gray-800 font-quicksand font-bold mt-6"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.headTile2}
-                    </h2>
-                    <p className="text-gray-800 font-quicksand">
+                    </motion.h2>
+                    <motion.p
+                      className="text-gray-800 font-quicksand"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.para2}
-                    </p>
-                    <h2 className="text-lg text-gray-800 font-quicksand font-bold mt-6">
+                    </motion.p>
+                    <motion.h2
+                      className="text-lg text-gray-800 font-quicksand font-bold mt-6"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.headTile3}
-                    </h2>
-                    <p className="text-gray-800 text-lg font-quicksand">
+                    </motion.h2>
+                    <motion.p
+                      className="text-gray-800 text-lg font-quicksand"
+                      variants={itemVariants}
+                    >
                       {service?.section1?.para3}
-                    </p>
+                    </motion.p>
                   </>
                 )}
 
-                <h2 className="text-lg text-gray-800 font-bold font-quicksand mt-6">
-                  {service?.section1?.listTile}
-                </h2>
+                {service?.section1?.listTile && (
+                  <motion.h2
+                    className="text-lg text-gray-800 font-bold font-quicksand mt-6"
+                    variants={itemVariants}
+                  >
+                    {service?.section1?.listTile}
+                  </motion.h2>
+                )}
 
-                <ul className="text-gray-800 list-disc pl-5 font-quicksand text-lg space-y-2">
+                <motion.ul
+                  className="text-gray-800 list-disc pl-5 font-quicksand text-lg space-y-2"
+                  variants={containerVariants}
+                >
                   {service?.section1?.list?.map((list, idx) => (
-                    <li key={idx}>{list.li}</li>
+                    <motion.li key={idx} variants={itemVariants}>
+                      {list.li}
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
 
-                <h2 className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide mt-6">
-                  {service?.section2?.heading}
-                </h2>
+                {service?.section2?.heading && (
+                  <motion.h2
+                    className="text-2xl text-gray-800 font-bold font-quicksand tracking-wide mt-6"
+                    variants={itemVariants}
+                  >
+                    {service?.section2?.heading}
+                  </motion.h2>
+                )}
 
                 {service?.section2?.paragraphs?.map((pra, inx) => (
-                  <p key={inx} className="text-gray-800 font-quicksand">
+                  <motion.p
+                    key={inx}
+                    className="text-gray-800 font-quicksand"
+                    variants={itemVariants}
+                  >
                     {pra.p}
-                  </p>
+                  </motion.p>
                 ))}
 
-                <ul className="text-gray-800 list-disc pl-5 space-y-2">
-                  {service?.section2?.list?.map((list, idx) => (
-                    <li key={idx} className="font-quicksand">
-                      {list.li}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {service?.section2?.list && (
+                  <motion.ul
+                    className="text-gray-800 list-disc pl-5 space-y-2"
+                    variants={containerVariants}
+                  >
+                    {service?.section2?.list?.map((list, idx) => (
+                      <motion.li
+                        key={idx}
+                        className="font-quicksand"
+                        variants={itemVariants}
+                      >
+                        {list.li}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Sidebar Links (right side) */}
-          <div className="hidden custom:block w-64 flex-shrink-0">
+          <motion.div
+            className="hidden custom:block w-64 flex-shrink-0"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3, type: "spring" }}
+          >
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 font-lato border-b pb-2">
                 {t("careers.career")}
@@ -374,7 +497,11 @@ const ServiceDetails = () => {
                     (serviceId === undefined && index === 0);
 
                   return (
-                    <li key={index}>
+                    <motion.li
+                      key={index}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
                       <Link
                         to={`/services/${encodeURIComponent(
                           link?.link?.toLowerCase().replace(/\s+/g, "-")
@@ -388,16 +515,15 @@ const ServiceDetails = () => {
                         <MdArrowForwardIos className="text-xs" />
                         {link?.cardTitle}
                       </Link>
-                    </li>
+                    </motion.li>
                   );
                 })}
               </ul>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
-      {/* <Login /> */}
-    </div>
+    </motion.div>
   );
 };
 

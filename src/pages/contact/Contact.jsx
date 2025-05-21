@@ -154,15 +154,11 @@ const Contact = () => {
         {/* exta */}
 
         {/* map */}
-        <div className="grid grid-cols-1 custom:grid-cols-2 gap-5 mt-8">
-          <div className=" rounded-lg overflow-hidden shadow-lg border border-gray-300">
-            <div className="h-[400px] w-full">
+        <div className="grid grid-cols-1 custom:grid-cols-2 gap-8 mt-8">
+          <div className=" rounded-lg overflow-hidden border border-gray-300 hover:scale-105 hover:shadow-md hover:translate-y-1 shadow-gray-300 transition-transform duration-300 cursor-pointer">
+            <div className="h-[300px] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2824.04242856414!2d26.08265577609651!3d44.942805418076055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMunicipiul%20Ploie%C5%9Fti%2C%20Strada%20MIHAI%20BRAVU%2C%20Nr.%20239%2C%20Bloc%20C4%2C%20Ap.%2071%2C%20Judet%20Prahova!5e0!3m2!1sen!2sbd!4v1747715320463!5m2!1sen!2sbd"
-                style={{
-                  border: "5px solid #a9aaac",
-                  borderRadius: "6px",
-                }}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -171,26 +167,23 @@ const Contact = () => {
             </div>
             <div className="p-4">
               <div className=" text-start py-2 space-y-3">
-                <p className="text-xl font-bold text-amber-500 font-quicksand">
-                  {t("footer.locationname0")}
-                </p>
-                <span className="flex gap-2">
-                  <FaLocationDot className="text-gray-500 size-5" />
-                  <p className="text-lg font-quicksand tracking-wider text-gray-500">
-                    {t("footer.location1")}
+                <span className="flex items-center gap-4">
+                  <FaLocationDot className="text-[#5478c4] size-5" />
+                  <p className="text-xl sm:text-2xl text-[#26587D] font-bold font-quicksand py-2">
+                    {t("footer.locationname0")}
                   </p>
                 </span>
+
+                <p className="text-base sm:text-lg text-gray-700 font-medium font-quicksand">
+                  {t("footer.location1")}
+                </p>
               </div>
             </div>
           </div>
-          <div className=" rounded-lg overflow-hidden shadow-lg border border-gray-300">
-            <div className="h-[400px] w-full">
+          <div className=" rounded-lg overflow-hidden border border-gray-300 hover:scale-105 hover:shadow-md hover:translate-y-1 shadow-gray-300 transition-transform duration-300 cursor-pointer">
+            <div className="h-[300px] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.844826053323!2d174.80450477623276!3d-41.225151936599566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38adc84ed527ed%3A0xe75c513a82f3c33a!2sLevel%201%2F3%20Johnsonville%20Road%2C%20Johnsonville%2C%20Wellington%206037%2C%20New%20Zealand!5e0!3m2!1sen!2sbd!4v1747718210944!5m2!1sen!2sbd"
-                style={{
-                  border: "5px solid #a9aaac",
-                  borderRadius: "6px",
-                }}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -199,26 +192,23 @@ const Contact = () => {
             </div>
             <div className="p-4">
               <div className=" text-start py-2 space-y-3">
-                <p className="text-xl font-bold text-amber-500 font-quicksand">
-                  {t("footer.locationname1")}
-                </p>
-                <span className="flex gap-2">
-                  <FaLocationDot className="text-gray-500 size-5" />
-                  <p className="text-lg font-quicksand tracking-wider text-gray-500">
-                    {t("footer.location2")}
+                <span className="flex items-center gap-4">
+                  <FaLocationDot className="text-[#5478c4] size-5" />
+                  <p className="text-xl sm:text-2xl text-[#26587D] font-bold font-quicksand py-2">
+                    {t("footer.locationname1")}
                   </p>
                 </span>
+
+                <p className="text-base sm:text-lg text-gray-700 font-medium font-quicksand">
+                  {t("footer.location2")}
+                </p>
               </div>
             </div>
           </div>
-          <div className=" rounded-lg overflow-hidden shadow-lg border border-gray-300">
+          <div className=" rounded-lg overflow-hidden shadow-lg border border-gray-300 hover:scale-105 hover:shadow-md hover:translate-y-1 shadow-gray-300 transition-transform duration-300 cursor-pointer">
             <div className="h-[400px] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2416664982293!2d115.85465307578193!3d-31.954339922463557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bad5de6852c1%3A0x2b092f23904c0a!2s100%20St%20Georges%20Terrace%2C%2025%2F108%20St%20Georges%20Terrace%2C%20Perth%20WA%206000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1747718286995!5m2!1sen!2sbd"
-                style={{
-                  border: "5px solid #a9aaac",
-                  borderRadius: "6px",
-                }}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -227,15 +217,16 @@ const Contact = () => {
             </div>
             <div className="p-4">
               <div className=" text-start py-2 space-y-3">
-                <p className="text-xl font-bold text-amber-500 font-quicksand">
-                  {t("footer.locationname2")}
-                </p>
-                <span className="flex gap-2">
-                  <FaLocationDot className="text-gray-500 size-5" />
-                  <p className="text-lg font-quicksand tracking-wider text-gray-500">
-                    {t("footer.location3")}
+                <span className="flex items-center gap-4">
+                  <FaLocationDot className="text-[#5478c4] size-5" />
+                  <p className="text-xl sm:text-2xl text-[#26587D] font-bold font-quicksand py-2">
+                    {t("footer.locationname2")}
                   </p>
                 </span>
+
+                <p className="text-base sm:text-lg text-gray-700 font-medium font-quicksand">
+                  {t("footer.location3")}
+                </p>
               </div>
             </div>
           </div>

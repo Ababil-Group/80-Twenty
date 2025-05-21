@@ -25,9 +25,9 @@ const Footer = () => {
   const navigation = [
     { title: t("menu.home"), path: "/" },
     { title: t("menu.services"), path: "/services" },
-    { title: t("menu.candidates"), path: "/candidates" },
-    { title: t("menu.clients"), path: "/clients" },
-    { title: t("menu.career"), path: "/career-advice" },
+    { title: t("menu.candidates"), path: "/jobs-for-candidates" },
+    { title: t("menu.clients"), path: "/hiring-for-employers" },
+    { title: t("menu.career"), path: "/career-tips" },
     { title: t("menu.about"), path: "/about-us" },
     { title: t("menu.faq"), path: "/faqs" },
     { title: t("menu.contact"), path: "/contact" },
@@ -89,22 +89,7 @@ const Footer = () => {
               </span>
               <p className="text-white/80">{t("footer.location3")}</p>
             </div>
-            {/* <div className="flex gap-x-2 text-white">
-              <FaPhone className="text-[#225EC3] size-5" />
-              <p className="text-white/80">{t("footer.tphone")}</p>
-            </div>
-            <div className="flex gap-x-2 text-white">
-              <FaBlenderPhone className="text-[#225EC3] size-5" />
-              <p className="text-white/80">{t("footer.mobile")}</p>
-            </div>
-            <div className="flex gap-x-2 text-white">
-              <MdMail className="text-[#225EC3] size-5" />
-              <p className="text-white/80">{t("footer.email1")}</p>
-            </div>
-            <div className="flex gap-x-2 text-white">
-              <MdMail className="text-[#225EC3] size-5" />
-              <p className="text-white/80">{t("footer.email2")}</p>
-            </div> */}
+            
           </div>
 
           {/* contact */}

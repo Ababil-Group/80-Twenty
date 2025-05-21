@@ -39,11 +39,11 @@
   },
   "footer": {
     "heading": "Our Office",
-    "locationname0": "Romania:",
+    "locationname0": "Romania",
     "location1": "HQ: Municipiul Ploieşti, Strada MIHAI BRAVU, Nr. 239, Bloc C4, Ap. 71, Judet Prahova",
-    "locationname1": "New Zealand:",
+    "locationname1": "New Zealand",
     "location2": "Level 1/3 Johnsonville Road, Johnsonville, Wellington 6037",
-    "locationname2": "Australia:",
+    "locationname2": "Australia",
     "location3": "Level 25, 108 St Georges Terrace, Perth WA 6000",
     "tphone": "+385 1 4668 604",
     "mobile": "+385 1 617 1548",
@@ -66,6 +66,7 @@
     "copyright": "© 2015 | All Rights reserved. 80twenty.com"
   },
   "candidate": {
+    "candidate":"jobs for candidates",
     "p1": "At 80 Twenty, we provide personalized support to job seekers at every stage of the recruitment process offering a free CV review, interview preparation with documentation guidance, relocation support for international roles, foreign language proficiency testing, and a pre-interview screening before you meet the employer. If no current openings match your profile, we’ll add you to our candidate database at no cost and reach out when a suitable opportunity arises. We also welcome proactive applications for advertised roles of interest.",
     "p2": "Additionally, we offer optional services including visa and work permit assistance, tax refund support, professional document translation and certification by a court interpreter, as well as CV writing and editing.",
     "p3": "The candiates are encouraged to contact the agency by their own initiative in case they see the advertisement for the position comliant with their qualifications.If needed, the candiates can order other optional services like visa and work permit application,tax refund,document translation by court interpretor,writing CV..etc.",
@@ -227,7 +228,7 @@
     "sdphl8": "Support for business expansion into new markets through data-driven workforce intelligence We collaborate with clients to deliver focused research that supports smarter decision-making and long-term growth."
   },
   "careers": {
-    "career": "Career advice",
+    "career": "career tips",
     "ch1": "How to write a CV?",
     "ch2": "Attending the interview",
     "ch3": "Education and training",
@@ -366,7 +367,7 @@
     "feedback": "THESE ANSWERS ARE GENERAL AND EACH PARTICULAR OFFER MAY BE ACCOMPANIED BY DIFFERENT CONDITIONS."
   },
   "clients": {
-    "client": "For clients",
+    "client": "hiring for employers",
     "cp1": "80 Twenty collaborates successfully with employers across Europe and beyond to recruit and hire qualified candidates. We also offer a range of client-focused services, including temporary employment solutions, outsourcing, payroll and administrative support, labor market research, and assistance with obtaining visas and work permits",
     "uname": "Username",
     "email": "Your email",
