@@ -1,22 +1,44 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import titleimge from "../../assets/home/title_bg.jpg";
 import {
   FaFacebook,
   FaFileUpload,
   FaGooglePlus,
   FaShareAlt,
   FaTwitterSquare,
+  FaSearch,
+  FaUserTie,
+  FaGlobe,
+  FaLanguage,
+  FaFileAlt,
+  FaHandshake,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { ImMail } from "react-icons/im";
 import { BsArrowRight } from "react-icons/bs";
-import Login from "../components/Login";
-import { MdArrowForwardIos } from "react-icons/md";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Candidate = () => {
   const { t } = useTranslation();
-  const [showIcons, setShowIcons] = useState(false);
   const [fileName, setFileName] = useState("");
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -25,192 +47,301 @@ const Candidate = () => {
       setFileName("");
     }
   };
+
+  const services = [
+    {
+      icon: <FaSearch className="text-3xl text-blue-600" />,
+      title: "Free CV Review",
+      description:
+        "Get expert feedback to optimize your resume for better visibility",
+    },
+    {
+      icon: <FaUserTie className="text-3xl text-blue-600" />,
+      title: "Interview Preparation",
+      description: "Practice sessions and documentation guidance for success",
+    },
+    {
+      icon: <FaGlobe className="text-3xl text-blue-600" />,
+      title: "Relocation Support",
+      description: "Assistance with international job placements",
+    },
+    {
+      icon: <FaLanguage className="text-3xl text-blue-600" />,
+      title: "Language Testing",
+      description: "Proficiency evaluation for multilingual roles",
+    },
+    {
+      icon: <FaFileAlt className="text-3xl text-blue-600" />,
+      title: "Document Services",
+      description: "Translation, certification and professional editing",
+    },
+    {
+      icon: <FaHandshake className="text-3xl text-blue-600" />,
+      title: "Candidate Database",
+      description: "We'll match you with opportunities as they arise",
+    },
+  ];
+
   return (
-    <div className="bg-white/90">
-      <div 
-        className="bg-cover bg-center "
-        style={{ backgroundImage: `url(${titleimge})` }}
+    <div className="bg-gray-50 min-h-screen">
+    
+      <motion.section
+        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
       >
-        <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center justify-between py-14 relative pr-6 md:pr-0">
-            <div className="flex items-center text-xl md:text-2xl gap-x-3 text-white/90">
-              <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
-                {t("candidate.candidate")}
-              </h2>
-            </div>
-            <button
-              className="flex items-end justify-end"
-              onClick={() => setShowIcons(!showIcons)}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn} className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Your Career Success Starts Here
+            </h1>
+            <motion.p
+              className="text-xl max-w-3xl mx-auto mb-10"
+              variants={fadeIn}
             >
-              <FaShareAlt className="text-white text-xl cursor-pointer" />
-            </button>
-            {showIcons && (
-              <div className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2">
-                <a href="https://facebook.com" target="_blank">
-                  <FaFacebook className="text-blue-700 text-2xl" />
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                  <FaTwitterSquare className="text-blue-500 text-2xl" />
-                </a>
-                <a href="https://google.com" target="_blank">
-                  <FaGooglePlus className="text-amber-800 text-2xl" />
-                </a>
-                <a href="https://mail.google.com/" target="_blank">
-                  <ImMail className="text-amber-950 text-2xl" />
-                </a>
+              At 80 Twenty, we provide personalized support at every stage of
+              your job search
+            </motion.p>
+            <motion.button
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a href="#register">Register Now</a>
+            </motion.button>
+          </motion.div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
+      </motion.section>
+
+     
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Candidate Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive support for your job search journey
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                variants={fadeIn}
+                whileHover={{ y: -10 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="mr-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-gray-600">{service.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:flex items-center gap-12">
+            <motion.div
+              className="lg:w-1/2 mb-10 lg:mb-0"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Optional Premium Services
+              </h2>
+              <ul className="space-y-4 text-lg text-gray-600">
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">•</span>
+                  Visa and work permit assistance
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">•</span>
+                  Tax refund support services
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">•</span>
+                  Professional document translation and certification
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">•</span>
+                  Premium CV writing and editing
+                </li>
+              </ul>
+            </motion.div>
+            <motion.div
+              className="lg:w-1/2 bg-white p-8 rounded-xl shadow-lg"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                How It Works
+              </h3>
+              <p className="text-gray-600 mb-6">
+                We welcome proactive applications for advertised roles. If no
+                current openings match your profile, we'll add you to our
+                candidate database at no cost and reach out when suitable
+                opportunities arise.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-4">
+                <p className="text-blue-800 font-medium">
+                  Our pre-interview screening ensures you only meet with
+                  employers when there's strong mutual interest.
+                </p>
               </div>
-            )}
+            </motion.div>
           </div>
         </div>
-      </div>
-      <div className="max-w-screen-xl mx-auto py-6">
-        <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700 text-lg font-quicksand">
-            {t("candidate.p1")}
-          </p>
-          <p className="text-gray-700 text-lg font-quicksand">
-            {t("candidate.p2")}
-          </p>
-          {/* <p className="text-gray-700">{t("candidate.p3")}</p> */}
-        </div>
-        {/* from */}
-        <div className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
-          <h2 className="text-2xl font-bold text-gray-600">
-            {t("candidate.from")}
-          </h2>
-          <div className="border-b border-gray-200"></div>
-          <div className="grid grid-cols-1 custom:grid-cols-2 gap-2 py-4">
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.inputname")}
-              </label>
-              <input
-                required
-                type="text"
-                placeholder={t("candidate.inputname")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.username")}
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("candidate.username")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.inputeamil")}
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("candidate.inputeamil")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.password")}
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("candidate.password")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.inputphone")}
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("candidate.inputphone")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.birth")}
-              </label>
-              <input
-                type="date"
-                required
-                placeholder={t("candidate.birth")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("candidate.profession")}
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("candidate.profession")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-          </div>
-          <div className="border-b border-gray-200"></div>
-          <div className="py-4">
-            <div className="xs:flex items-center gap-x-1.5">
-              <div className="relative w-42">
-                <input
-                  type="file"
-                  id="file"
-                  className="hidden"
-                  required
-                  accept=".pdf"
-                  onChange={handleFileChange}
-                />
-                <label
-                  htmlFor="file"
-                  className="flex items-center gap-2 justify-center h-10 px-3 rounded-md border border-gray-300 bg-[#1046a3] text-gray-800 cursor-pointer hover:bg-[#225EC3]/90 shadow-md"
+      </section>
+
+     
+      <section id="register" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="bg-gray-50 rounded-xl shadow-lg p-6 md:p-8"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-2xl font-bold text-gray-800 mb-6"
+              variants={fadeIn}
+            >
+              {t("candidate.from")}
+            </motion.h2>
+
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {[
+                { label: t("candidate.inputname"), type: "text" },
+                { label: t("candidate.username"), type: "text" },
+                { label: t("candidate.inputeamil"), type: "email" },
+                { label: t("candidate.password"), type: "password" },
+                { label: t("candidate.inputphone"), type: "tel" },
+                { label: t("candidate.birth"), type: "date" },
+                { label: t("candidate.profession"), type: "text" },
+              ].map((field, index) => (
+                <motion.div
+                  key={index}
+                  className="flex flex-col"
+                  variants={fadeIn}
                 >
-                  <span className="text-xl font-semibold text-white uppercase">
+                  <label className="text-gray-600 mb-2 font-medium">
+                    {field.label}
+                  </label>
+                  <input
+                    type={field.type}
+                    required
+                    placeholder={field.label}
+                    className="h-12 px-4 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+
+         
+            <motion.div className="mb-6" variants={fadeIn}>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="relative">
+                  <input
+                    type="file"
+                    id="file"
+                    className="hidden"
+                    required
+                    accept=".pdf"
+                    onChange={handleFileChange}
+                  />
+                  <motion.label
+                    htmlFor="file"
+                    className="flex items-center gap-2 justify-center h-12 px-6 rounded-lg bg-blue-600 text-white font-medium cursor-pointer hover:bg-blue-700 transition-colors shadow-md"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
                     {t("candidate.cv")}
-                  </span>
-                  <FaFileUpload className="text-white text-xl" />
+                    <FaFileUpload className="text-white" />
+                  </motion.label>
+                </div>
+
+                {fileName && (
+                  <motion.div
+                    className="text-gray-700"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                  >
+                    <span className="font-medium">Selected: </span>
+                    <span className="truncate max-w-xs inline-block">
+                      {fileName}
+                    </span>
+                  </motion.div>
+                )}
+              </div>
+              <p className="text-gray-500 text-sm mt-2">
+                {t("candidate.size")}
+              </p>
+            </motion.div>
+
+           
+            <motion.div className="mb-8" variants={fadeIn}>
+              <div className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  className="mt-1 w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  required
+                />
+                <label htmlFor="consent" className="text-gray-700">
+                  <p className="font-medium mb-1">Consent Checkbox:</p>
+                  <p>{t("candidate.condition")}</p>
                 </label>
               </div>
+            </motion.div>
 
-              {fileName && (
-                <div className="mt-2 xs:mt-0 xs:ml-2">
-                  <span className="text-gray-700 font-medium">
-                    Selected file:{" "}
-                  </span>
-                  <span className="text-gray-600 truncate max-w-[200px] inline-block">
-                    {fileName}
-                  </span>
-                </div>
-              )}
-              <p className="text-gray-600 ml-2">{t("candidate.size")}</p>
-            </div>
-          </div>
-          <div className="border-b border-gray-200"></div>
-          <div className="py-4">
-            <div className="flex items-center gap-x-2">
-              <input type="checkbox" className="w-5 h-5" />
-              <p className="text-lg font-semibold">Consent Checkbox:</p>
-            </div>
-            <p className="text-gray-600 text-lg font-quicksand">
-              {t("candidate.condition")}
-            </p>
-          </div>
-          <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
-            {t("candidate.register")} <BsArrowRight />
-          </button>
+           
+            <motion.button
+              className="w-full md:w-auto h-12 px-8 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold uppercase flex items-center justify-center gap-2 shadow-lg transition-colors"
+              variants={fadeIn}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {t("candidate.register")}
+              <BsArrowRight className="text-lg" />
+            </motion.button>
+          </motion.div>
         </div>
-      </div>
-      {/* <Login /> */}
+      </section>
     </div>
   );
 };

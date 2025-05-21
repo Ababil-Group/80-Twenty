@@ -1,197 +1,241 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import titleimge from "../../assets/home/title_bg.jpg";
+import React from "react";
+import { motion } from "framer-motion";
 import {
-  FaFacebook,
-  FaGooglePlus,
-  FaShareAlt,
-  FaTwitterSquare,
+  FaSearch,
+  FaUsers,
+  FaChartLine,
+  FaGlobeEurope,
+  FaFileAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { ImMail } from "react-icons/im";
-import { BsArrowRight } from "react-icons/bs";
-import Login from "../components/Login";
-import { MdArrowForwardIos } from "react-icons/md";
+import { HiOutlineBriefcase, HiOutlineOfficeBuilding } from "react-icons/hi";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Clients = () => {
-  const { t } = useTranslation();
-  const [showIcons, setShowIcons] = useState(false);
+  const services = [
+    {
+      icon: <FaSearch className="text-3xl text-blue-600" />,
+      title: "Targeted Recruitment",
+      description:
+        "We identify and secure qualified professionals who precisely match your technical requirements and company culture.",
+    },
+    {
+      icon: <HiOutlineBriefcase className="text-3xl text-blue-600" />,
+      title: "Flexible Staffing",
+      description:
+        "Temporary employment services to scale your workforce according to project demands.",
+    },
+    {
+      icon: <HiOutlineOfficeBuilding className="text-3xl text-blue-600" />,
+      title: "HR Outsourcing",
+      description:
+        "Complete payroll processing and administrative support to streamline your operations.",
+    },
+    {
+      icon: <FaGlobeEurope className="text-3xl text-blue-600" />,
+      title: "Global Mobility",
+      description:
+        "Visa and work permit assistance for international hiring needs.",
+    },
+    {
+      icon: <FaChartLine className="text-3xl text-blue-600" />,
+      title: "Market Intelligence",
+      description:
+        "Labor market research and compensation benchmarking to inform your talent strategy.",
+    },
+    {
+      icon: <FaUsers className="text-3xl text-blue-600" />,
+      title: "Workforce Consulting",
+      description:
+        "Strategic advice on organizational design and talent acquisition.",
+    },
+  ];
 
   return (
-    <div className="bg-white/90">
-      <div
-        className="bg-cover bg-center"
-        style={{ backgroundImage: `url(${titleimge})` }}
+    <div className="bg-gray-50">
+      
+      <motion.section
+        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
       >
-        <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center text-2xl gap-x-3 text-white/90">
-              <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
-                {t("clients.client")}
-              </h2>
-            </div>
-            <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
-              <button
-                className="flex items-end justify-end"
-                onClick={() => setShowIcons(!showIcons)}
-              >
-                <FaShareAlt className="text-white text-xl cursor-pointer" />
-              </button>
-              {showIcons && (
-                <div className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2">
-                  <a href="https://facebook.com" target="_blank">
-                    <FaFacebook className="text-blue-700 text-2xl" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <FaTwitterSquare className="text-blue-500 text-2xl" />
-                  </a>
-                  <a href="https://google.com" target="_blank">
-                    <FaGooglePlus className="text-amber-800 text-2xl" />
-                  </a>
-                  <a href="https://mail.google.com/" target="_blank">
-                    <ImMail className="text-amber-950 text-2xl" />
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn} className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Strategic Hiring Solutions for Employers
+            </h1>
+            <motion.p
+              className="text-xl max-w-3xl mx-auto mb-10"
+              variants={fadeIn}
+            >
+              At 80 Twenty, we specialize in connecting European employers with
+              top-tier talent across industries.
+            </motion.p>
+            <motion.button
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a href="/contact">Partner With Us</a>
+            </motion.button>
+          </motion.div>
         </div>
-      </div>
-      <div className="max-w-screen-xl mx-auto py-6">
-        <div className="max-w-screen-custom space-y-3 px-2 md:px-0">
-          <p className="text-gray-700 font-quicksand">{t("clients.cp1")}.</p>
-        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
+      </motion.section>
 
-        {/* <form className="max-w-screen-custom space-y-3 px-2 md:px-0 my-5">
-          <h2 className="text-2xl font-bold text-gray-600">
-            {t("candidate.from")}
-          </h2>
-          <div className="border-b border-gray-200"></div>
-          <div className="grid grid-cols-1 custom:grid-cols-2 gap-2 py-4">
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.uname")}:
-              </label>
-              <input
-                required
-                type="text"
-                placeholder={t("clients.uname")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
+     
+      <motion.section
+        className="py-16 bg-white"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:flex items-center gap-12">
+            <motion.div
+              className="lg:w-1/2 mb-10 lg:mb-0"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Our Recruitment Partnership
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                80 Twenty collaborates successfully with employers across Europe
+                and beyond to recruit and hire qualified candidates.
+              </p>
+              <p className="text-lg text-gray-600">
+                Our comprehensive recruitment partnership goes beyond
+                traditional hiring to deliver complete workforce solutions
+                tailored to your business needs.
+              </p>
+            </motion.div>
+            <motion.div
+              className="lg:w-1/2 bg-gray-100 rounded-xl overflow-hidden shadow-lg"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Team meeting"
+                className="w-full h-full object-cover"
               />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.email")}:
-              </label>
-              <input
-                type="email"
-                required
-                placeholder={t("clients.email")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.password")}:
-              </label>
-              <input
-                type="password"
-                required
-                placeholder={t("clients.password")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.phone")}:
-              </label>
-              <input
-                type="number"
-                required
-                placeholder={t("clients.phone")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.city")}:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("clients.city")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.country")}:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("clients.country")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.address")}:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("clients.address")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.contactperson")}:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("clients.contactperson")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="" className="text-gray-600">
-                {t("clients.website")}:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder={t("clients.website")}
-                className="h-10 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-              />
-            </div>
+            </motion.div>
           </div>
-          <div className="flex flex-col">
-            <label htmlFor="" className="text-gray-600">
-              {t("clients.message")}:
-            </label>
-            <textarea
-              type="text"
-              required
-              placeholder={t("clients.message")}
-              className="h-30 px-2 rounded-sm border w-full bg-white text-gray-800 outline-none focus:ring-1 ring-gray-800"
-            />
-          </div>
-          <div className="border-b border-gray-200"></div>
-          <div className="py-4">
-            <div className="flex gap-x-2">
-              <input type="checkbox" className="w-7 h-7" required />
-              <p>{t("candidate.condition")}</p>
-            </div>
-          </div>
-          <button className="text-lg tracking-wider cursor-pointer hover:bg-red-800 bg-red-700/80 rounded-md px-4 py-2 text-white flex items-center justify-center gap-x-2 uppercase">
-            {t("candidate.register")} <BsArrowRight />
-          </button>
-        </form> */}
-      </div>
-      {/* <Login /> */}
+        </div>
+      </motion.section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Employer Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer a range of client-focused services to meet all your
+              hiring needs
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                variants={fadeIn}
+                whileHover={{ y: -10 }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="mr-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-gray-600">{service.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+     
+      <motion.section
+        className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h2
+            className="text-3xl font-bold mb-6"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Ready to transform your hiring process?
+          </motion.h2>
+          <motion.p
+            className="text-xl mb-8 max-w-3xl mx-auto"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Partner with us today and experience the difference of strategic
+            recruitment.
+          </motion.p>
+          <motion.a
+            href="/contact"
+            className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started With Our Services
+          </motion.a>
+        </div>
+      </motion.section>
     </div>
   );
 };

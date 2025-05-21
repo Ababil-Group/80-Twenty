@@ -1,23 +1,63 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import c1 from "../../assets/career/c1.jpg";
 import c2 from "../../assets/img/Career Tips/attending-the-interview.jpg";
 import c3 from "../../assets/img/Career Tips/education-and-training.jpg";
 import c4 from "../../assets/img/Career Tips/cover-letters-are-history.jpg";
-import titleimge from "../../assets/home/title_bg.jpg";
+
 import { Link } from "react-router-dom";
-import {
-  FaFacebook,
-  FaGooglePlus,
-  FaShareAlt,
-  FaTwitterSquare,
-} from "react-icons/fa";
-import { ImMail } from "react-icons/im";
+
+
 import { MdArrowForwardIos } from "react-icons/md";
 import Login from "../components/Login";
+import { motion } from "framer-motion";
 const Carrer = () => {
   const { t } = useTranslation();
-  const [showIcons, setShowIcons] = useState(false);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+  const slideUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  };
+
+  const scaleUp = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
   const careerdata = [
     {
       img: c1,
@@ -49,110 +89,144 @@ const Carrer = () => {
     },
   ];
 
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <div className="bg-white/90">
-      <div
-        className="bg-cover bg-center"
-        style={{ backgroundImage: `url(${titleimge})` }}
+      <motion.section
+        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
       >
-        <div className="max-w-screen-xl mx-auto">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center text-2xl gap-x-3 text-white/90">
-              <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
-                {t("careers.career")}
-              </h2>
-            </div>
-            <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
-              <button
-                className="flex items-end justify-end"
-                onClick={() => setShowIcons(!showIcons)}
-              >
-                <FaShareAlt className="text-white text-xl cursor-pointer" />
-              </button>
-              {showIcons && (
-                <div className="bg-white/80 flex absolute top-20 mr-5 custom:mr-0 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2">
-                  <a href="https://facebook.com" target="_blank">
-                    <FaFacebook className="text-blue-700 text-2xl" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <FaTwitterSquare className="text-blue-500 text-2xl" />
-                  </a>
-                  <a href="https://google.com" target="_blank">
-                    <FaGooglePlus className="text-amber-800 text-2xl" />
-                  </a>
-                  <a href="https://mail.google.com/" target="_blank">
-                    <ImMail className="text-amber-950 text-2xl" />
-                  </a>
-                </div>
-              )}
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn} className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Career Success Starts Here
+            </h1>
+            <motion.p
+              className="text-xl max-w-3xl mx-auto mb-10"
+              variants={fadeIn}
+            >
+              Essential tips to perfect your CV, ace interviews, and stand out
+              in today's competitive job market
+            </motion.p>
+            <motion.button
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link to="#tips">Explore Tips</Link>
+            </motion.button>
+          </motion.div>
         </div>
-      </div>
-      {/* card section */}
-      <section className="max-w-screen-xl mx-auto py-6 px-4">
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
+      </motion.section>
+      
+      <motion.section
+        id="services"
+        className="max-w-screen-xl mx-auto py-6 px-4"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        variants={container}
+      >
         <div className="flex flex-col custom:flex-row gap-8">
-          {/* Main Content (left side) */}
+         
           <div className="flex-1 space-y-3 text-gray-800">
             {careerdata.map((career, ind) => (
-              <div
+              <motion.div
                 key={ind}
                 className="grid grid-cols-1 custom:grid-cols-2 gap-6 mt-16"
+                variants={item}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <img
+                <motion.img
                   src={career.img}
                   alt={career.chardp1}
                   className="bg-gray-300 border border-gray-200 rounded-sm object-cover h-full"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
                 />
                 <div className="flex flex-col items-start space-y-6">
                   <Link
                     to={`/career-advice/${encodeURIComponent(
                       career.link.toLowerCase().replace(/\s+/g, "-")
                     )}`}
-                    className="text-2xl text-secondary border-b-4 pb-1 border-amber-500 font-bold tracking-wide"
+                    className="text-2xl text-secondary border-b-4 pb-1 border-amber-500 font-bold tracking-wide hover:text-amber-600 transition-colors"
                   >
                     {career.cardh1}
                   </Link>
                   <p className="text-gray-800">{career.chardp1}</p>
-                  <Link
-                    to={`/career-advice/${encodeURIComponent(
-                      career.link.toLowerCase().replace(/\s+/g, "-")
-                    )}`}
-                    className="px-4 py-2 border border-gray-300 hover:bg-blue rounded-md uppercase hover:text-white text-lg font-semibold flex items-center gap-x-3"
-                  >
-                    {career.btn} <MdArrowForwardIos />
-                  </Link>
+                  <motion.div whileHover={{ scale: 1.03 }}>
+                    <Link
+                      to={`/career-advice/${encodeURIComponent(
+                        career.link.toLowerCase().replace(/\s+/g, "-")
+                      )}`}
+                      className="px-4 py-2 border border-gray-300 hover:bg-amber-500 font-quicksand uppercase hover:text-gray-900 text-lg font-bold flex items-center gap-x-3"
+                    >
+                      {career.btn}... <MdArrowForwardIos />
+                    </Link>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Sidebar Links (right side) */}
-          <div className="hidden custom:block w-64 flex-shrink-0">
+          
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={scaleUp}
+            className="hidden custom:block w-64 flex-shrink-0"
+          >
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">
                 {t("careers.career")}
               </h3>
               <ul className="space-y-3">
                 {careerdata.map((link, index) => (
-                  <li key={index}>
+                  <motion.li
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <Link
                       to={`/career-advice/${encodeURIComponent(
                         link.link.toLowerCase().replace(/\s+/g, "-")
                       )}`}
-                      className="flex items-center gap-x-2 text-gray-700 hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
+                      className="flex items-center gap-x-2 text-gray-900 font-quicksand hover:text-secondary transition-colors p-2 hover:bg-gray-100 rounded"
                     >
                       <MdArrowForwardIos className="text-xs" />
                       {link.cardh1}
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
       {/* <Login /> */}
     </div>
   );

@@ -63,7 +63,6 @@ const AboutDetails = () => {
 
   return (
     <div className="bg-white/90">
-      {/* Header Section */}
       <div
         className="bg-cover bg-center"
         style={{ backgroundImage: `url(${titleimge})` }}
@@ -120,10 +119,9 @@ const AboutDetails = () => {
         </div>
       </div>
 
-      {/* Content Section */}
       <section className="max-w-screen-xl mx-auto py-6 px-4">
         <div className="flex flex-col custom:flex-row gap-8">
-          {/* Main Content (left side) */}
+         
           <div className="flex-1 space-y-3 text-gray-800">
             <div className="flex flex-col items-start space-y-6 mt-6">
               {about?.cardh1 && (
@@ -193,7 +191,7 @@ const AboutDetails = () => {
             </div>
           </div>
 
-          {/* Sidebar Links (right side) */}
+         
           <div className="hidden custom:block w-64 flex-shrink-0">
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">

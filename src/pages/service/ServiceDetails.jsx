@@ -339,13 +339,11 @@ const ServiceDetails = () => {
         </div>
       </motion.div>
 
-      {/* card section */}
       <section className="max-w-screen-xl mx-auto py-6 px-4">
         <motion.div
           className="flex flex-col custom:flex-row gap-8"
           variants={containerVariants}
         >
-          {/* Main Content (left side) */}
           <motion.div
             className="flex-1 space-y-3 text-gray-800"
             variants={containerVariants}
@@ -478,7 +476,6 @@ const ServiceDetails = () => {
             </div>
           </motion.div>
 
-          {/* Sidebar Links (right side) */}
           <motion.div
             className="hidden custom:block w-64 flex-shrink-0"
             initial={{ x: 50, opacity: 0 }}

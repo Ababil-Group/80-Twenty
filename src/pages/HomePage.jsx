@@ -24,7 +24,6 @@ const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation();
 
-  // Scroll animation setup
   const { scrollYProgress } = useScroll();
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
@@ -67,7 +66,6 @@ const HomePage = () => {
     },
   ];
 
-  // Animation variants
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -102,10 +100,26 @@ const HomePage = () => {
       },
     },
   };
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
 
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
   return (
     <div className="overflow-hidden">
-      {/* Hero Slider Section */}
       <motion.section
         className="relative"
         initial="hidden"
@@ -187,28 +201,27 @@ const HomePage = () => {
         </div>
       </motion.section>
 
-      {/* Title Section with Parallax Effect */}
-      <section
-        className="bg-cover bg-center h-auto md:h-[300px]"
-        style={{
-          backgroundImage: `url(${titleimge})`,
-        }}
+      <motion.section
+        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 bg-black/30 py-5">
-          <h1
-            className="text-amber-500 font-quicksand font-semibold text-2xl border-b-4 border-amber-500 pb-2 md:text-3xl"
-            variants={item}
-          >
-            {t("herotext.headtext")}
-          </h1>
-          <p
-            className="text-white text-sm md:text-xl font-medium max-w-screen-md mx-auto text-center px-4"
-            variants={item}
-          >
-            {t("herotext.subtext")}
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn} className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-amber-400 mb-6">
+              {t("herotext.headtext")}
+            </h1>
+            <motion.p
+              className="text-xl max-w-3xl mx-auto mb-10"
+              variants={fadeIn}
+            >
+              {t("herotext.subtext")}
+            </motion.p>
+          </motion.div>
         </div>
-      </section>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
+      </motion.section>
 
       {/* Cards Section */}
       <motion.section

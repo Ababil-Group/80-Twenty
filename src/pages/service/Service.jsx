@@ -19,17 +19,10 @@ import s8 from "../../assets/img/Service/s8.jpg";
 import s9 from "../../assets/img/Service/s9.jpg";
 import { Link } from "react-router-dom";
 import { ImMail } from "react-icons/im";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const Service = () => {
   const { t } = useTranslation();
-  const [showIcons, setShowIcons] = useState(false);
-  const { scrollYProgress } = useScroll();
-
-  // Parallax effects
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   // Animation variants
   const container = {
@@ -37,7 +30,7 @@ const Service = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay between each child animation
+        staggerChildren: 0.2,
       },
     },
   };
@@ -53,17 +46,6 @@ const Service = () => {
       },
     },
   };
-  const slideUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
 
   const scaleUp = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -76,6 +58,26 @@ const Service = () => {
       },
     },
   };
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   const serverdata = [
     {
       id: 0,
@@ -152,59 +154,40 @@ const Service = () => {
   ];
 
   return (
-    <div className="bg-white/90 overflow-hidden">
-      {/* Header with Parallax */}
-      <div
-        className="bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${titleimge})`,
-        }}
-      >
-        <div className="max-w-screen-xl mx-auto h-full flex flex-col justify-center">
-          <div className="flex items-center justify-between py-14 relative pr-6 md:pr-0">
-            <div className="flex items-center text-xl md:text-2xl gap-x-3 text-white/90">
-              <MdArrowForwardIos />
-              <h2 className="text-white/80 font-bold text-xl md:text-2xl font-quicksand uppercase">
-                {t("services.service")}
-              </h2>
-            </div>
-
-            <div className="relative pr-6 md:pr-0">
-              <button
-                className="flex items-end justify-end"
-                onClick={() => setShowIcons(!showIcons)}
-              >
-                <FaShareAlt className="text-white text-xl cursor-pointer hover:text-amber-300 transition-colors" />
-              </button>
-              {showIcons && (
-                <motion.div
-                  className="bg-white/80 flex absolute top-10 right-0 z-10 shadow-2xl rounded-md p-2 gap-x-2"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <a href="https://facebook.com" target="_blank">
-                    <FaFacebook className="text-blue-700 text-2xl hover:scale-110 transition-transform" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank">
-                    <FaTwitterSquare className="text-blue-500 text-2xl hover:scale-110 transition-transform" />
-                  </a>
-                  <a href="https://google.com" target="_blank">
-                    <FaGooglePlus className="text-amber-800 text-2xl hover:scale-110 transition-transform" />
-                  </a>
-                  <a href="https://mail.google.com/" target="_blank">
-                    <ImMail className="text-amber-950 text-2xl hover:scale-110 transition-transform" />
-                  </a>
-                </motion.div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Card Section */}
+    <div className="bg-white/90">
       <motion.section
+        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn} className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Comprehensive Recruitment Services
+            </h1>
+            <motion.p
+              className="text-xl max-w-3xl mx-auto mb-10"
+              variants={fadeIn}
+            >
+              We deliver tailored workforce solutions to meet your business
+              needs across all industries.
+            </motion.p>
+            <motion.button
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              variants={fadeIn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a href="#services">Explore Our Services</a>
+            </motion.button>
+          </motion.div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
+      </motion.section>
+
+      <motion.section
+        id="services"
         className="max-w-screen-xl mx-auto py-6 px-4"
         initial="hidden"
         whileInView="show"
@@ -212,7 +195,6 @@ const Service = () => {
         variants={container}
       >
         <div className="flex flex-col custom:flex-row gap-8">
-          {/* Main Content (left side) */}
           <div className="flex-1 space-y-3 text-gray-800">
             {serverdata.map((service, ind) => (
               <motion.div
@@ -254,13 +236,12 @@ const Service = () => {
             ))}
           </div>
 
-          {/* Sidebar Links (right side) */}
           <motion.div
-            className="hidden custom:block w-64 flex-shrink-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={scaleUp}
+            className="hidden custom:block w-64 flex-shrink-0 relative"
           >
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 border-b pb-2">
@@ -289,21 +270,6 @@ const Service = () => {
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Floating background elements */}
-      <motion.div
-        className="fixed top-0 left-0 w-full h-screen pointer-events-none -z-10"
-        style={{ opacity }}
-      >
-        <motion.div
-          className="absolute top-1/4 left-10 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-20"
-          style={{ y: y1 }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-10 w-40 h-40 bg-amber-200 rounded-full blur-3xl opacity-20"
-          style={{ y: y2 }}
-        />
-      </motion.div>
     </div>
   );
 };

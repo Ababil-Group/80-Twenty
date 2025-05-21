@@ -190,10 +190,10 @@ const CarrierDetails = () => {
           </div>
         </div>
       </div>
-      {/* card section */}
+      
       <section className="max-w-screen-xl mx-auto py-6 px-4">
         <div className="flex flex-col custom:flex-row gap-8">
-          {/* Main Content (left side) */}
+        
           <div className="flex-1 space-y-3 text-gray-800">
             <div className="flex flex-col">
               <div className="mb-6">
