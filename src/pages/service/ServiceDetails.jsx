@@ -484,7 +484,7 @@ const ServiceDetails = () => {
           >
             <div className="sticky top-4 bg-gray-200 p-4 rounded-lg shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-gray-800 font-lato border-b pb-2">
-                {t("careers.career")}
+                {t("services.service")}
               </h3>
               <ul className="space-y-3">
                 {serverdata.map((link, index) => {

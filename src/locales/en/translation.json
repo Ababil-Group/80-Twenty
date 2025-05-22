@@ -110,9 +110,9 @@
   },
   "services": {
     "service": "Services",
-    "sheroh": "Sveobuhvatne usluge regrutacije",
-    "sherop": "Pružamo prilagođena rešenja za radnu snagu koja odgovaraju potrebama vašeg poslovanja u svim industrijama.",
-    "sherobtn": "Istražite naše usluge",
+    "sheroh": "Comprehensive Recruitment Services",
+    "sherop": "We deliver tailored workforce solutions to meet your business needs across all industries.",
+    "sherobtn": "Explore Our Services",
 
     "sp1": "80 Twenty is a specialized employment and temporary employment agency. Thanks to the numerous organizations we cooperate with and detailed labor market research, we can greatly facilitate your search for employment abroad and in Croatia.",
     "sp2": "As an employment agency, we have a wide network of business contacts and have information about numerous positions that are not published anywhere. We will help our candidates with obtaining work permits and visas. And for those who have experience abroad, we will also apply for a tax refund.",
@@ -258,7 +258,7 @@
   },
 
   "careers": {
-    "career": "career tips",
+    "career": "Career Tips",
     "cheroh": "Career Success Starts Here",
     "cherop": "Essential tips to perfect your CV, ace interviews, and stand out in today's competitive job market",
     "cherobtn": "Explore Tips",
