@@ -39,14 +39,13 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {t("contacts.cpage")}
+              {t("contacts.cheroh")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              Get in touch with 80 Twenty. We're always here to serve your
-              future.
+              {t("contacts.cherop")}
             </motion.p>
           </motion.div>
         </div>
@@ -181,8 +180,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Look For The{" "}
-          <span className="text-amber-500 font-bold">Office Near</span> You
+          {t("contacts.cfindp1")}
+          <span className="text-amber-500 font-bold">
+            {t("contacts.cfindp2")}
+          </span>{" "}
+          {t("contacts.cfindp3")}
         </motion.h3>
 
         <div className="grid grid-cols-1 custom:grid-cols-2 gap-8 mt-8">

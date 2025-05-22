@@ -89,17 +89,6 @@ const HomePage = () => {
     },
   };
 
-  const slideUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9],
-      },
-    },
-  };
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -247,7 +236,7 @@ const HomePage = () => {
                   to={card.url}
                   className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer block h-full"
                 >
-                  <div className="p-6 flex flex-col items-center justify-between h-auto md:h-[420px]">
+                  <div className="p-6 flex flex-col items-center justify-between h-auto md:h-[450px]">
                     <motion.img
                       src={card.image}
                       alt=""

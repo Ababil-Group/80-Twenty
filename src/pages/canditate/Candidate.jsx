@@ -51,40 +51,38 @@ const Candidate = () => {
   const services = [
     {
       icon: <FaSearch className="text-3xl text-blue-600" />,
-      title: "Free CV Review",
-      description:
-        "Get expert feedback to optimize your resume for better visibility",
+      title: t("candidate.citemh1"),
+      description: t("candidate.citemp1"),
     },
     {
       icon: <FaUserTie className="text-3xl text-blue-600" />,
-      title: "Interview Preparation",
-      description: "Practice sessions and documentation guidance for success",
+      title: t("candidate.citemh2"),
+      description: t("candidate.citemp2"),
     },
     {
       icon: <FaGlobe className="text-3xl text-blue-600" />,
-      title: "Relocation Support",
-      description: "Assistance with international job placements",
+      title: t("candidate.citemh3"),
+      description: t("candidate.citemp3"),
     },
     {
       icon: <FaLanguage className="text-3xl text-blue-600" />,
-      title: "Language Testing",
-      description: "Proficiency evaluation for multilingual roles",
+      title: t("candidate.citemh4"),
+      description: t("candidate.citemp4"),
     },
     {
       icon: <FaFileAlt className="text-3xl text-blue-600" />,
-      title: "Document Services",
-      description: "Translation, certification and professional editing",
+      title: t("candidate.citemh5"),
+      description: t("candidate.citemp5"),
     },
     {
       icon: <FaHandshake className="text-3xl text-blue-600" />,
-      title: "Candidate Database",
-      description: "We'll match you with opportunities as they arise",
+      title: t("candidate.citemh6"),
+      description: t("candidate.citemp6"),
     },
   ];
 
   return (
     <div className="bg-gray-50 min-h-screen">
-    
       <motion.section
         className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
         initial="hidden"
@@ -94,14 +92,13 @@ const Candidate = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Your Career Success Starts Here
+              {t("candidate.cherohead")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              At 80 Twenty, we provide personalized support at every stage of
-              your job search
+              {t("candidate.cherop1")}
             </motion.p>
             <motion.button
               className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
@@ -109,14 +106,13 @@ const Candidate = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="#register">Register Now</a>
+              <a href="#register">{t("candidate.cherobtn")}</a>
             </motion.button>
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
       </motion.section>
 
-     
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -127,10 +123,10 @@ const Candidate = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Candidate Services
+              {t("candidate.csubhead")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive support for your job search journey
+              {t("candidate.csubp1")}
             </p>
           </motion.div>
 
@@ -161,7 +157,6 @@ const Candidate = () => {
         </div>
       </section>
 
-      
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex items-center gap-12">
@@ -173,24 +168,24 @@ const Candidate = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Optional Premium Services
+                {t("candidate.clisth")}
               </h2>
               <ul className="space-y-4 text-lg text-gray-600">
-                <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Visa and work permit assistance
+                <li className="flex items-start ">
+                  <span className="text-blue-600 mr-2">✔</span>
+                  {t("candidate.clist1")}
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Tax refund support services
+                  <span className="text-blue-600 mr-2">✔</span>
+                  {t("candidate.clist2")}
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Professional document translation and certification
+                  <span className="text-blue-600 mr-2">✔</span>
+                  {t("candidate.clist3")}
                 </li>
                 <li className="flex items-start">
-                  <span className="text-blue-600 mr-2">•</span>
-                  Premium CV writing and editing
+                  <span className="text-blue-600 mr-2">✔</span>
+                  {t("candidate.clist4")}
                 </li>
               </ul>
             </motion.div>
@@ -202,18 +197,12 @@ const Candidate = () => {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                How It Works
+                {t("candidate.csptialh")}
               </h3>
-              <p className="text-gray-600 mb-6">
-                We welcome proactive applications for advertised roles. If no
-                current openings match your profile, we'll add you to our
-                candidate database at no cost and reach out when suitable
-                opportunities arise.
-              </p>
+              <p className="text-gray-600 mb-6">{t("candidate.csptialp1")}</p>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4">
                 <p className="text-blue-800 font-medium">
-                  Our pre-interview screening ensures you only meet with
-                  employers when there's strong mutual interest.
+                  {t("candidate.csptialp2")}
                 </p>
               </div>
             </motion.div>
@@ -221,7 +210,6 @@ const Candidate = () => {
         </div>
       </section>
 
-     
       <section id="register" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -272,7 +260,6 @@ const Candidate = () => {
               ))}
             </motion.div>
 
-         
             <motion.div className="mb-6" variants={fadeIn}>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <div className="relative">
@@ -313,7 +300,6 @@ const Candidate = () => {
               </p>
             </motion.div>
 
-           
             <motion.div className="mb-8" variants={fadeIn}>
               <div className="flex items-start gap-3">
                 <input
@@ -329,7 +315,6 @@ const Candidate = () => {
               </div>
             </motion.div>
 
-           
             <motion.button
               className="w-full md:w-auto h-12 px-8 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold uppercase flex items-center justify-center gap-2 shadow-lg transition-colors"
               variants={fadeIn}

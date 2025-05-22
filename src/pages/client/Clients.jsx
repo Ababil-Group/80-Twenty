@@ -8,6 +8,7 @@ import {
   FaFileAlt,
 } from "react-icons/fa";
 import { HiOutlineBriefcase, HiOutlineOfficeBuilding } from "react-icons/hi";
+import { useTranslation } from "react-i18next";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -29,48 +30,42 @@ const staggerContainer = {
 };
 
 const Clients = () => {
+  const { t } = useTranslation();
   const services = [
     {
       icon: <FaSearch className="text-3xl text-blue-600" />,
-      title: "Targeted Recruitment",
-      description:
-        "We identify and secure qualified professionals who precisely match your technical requirements and company culture.",
+      title: t("clients.cservicehlisth1"),
+      description: t("clients.cservicehlistp1"),
     },
     {
       icon: <HiOutlineBriefcase className="text-3xl text-blue-600" />,
-      title: "Flexible Staffing",
-      description:
-        "Temporary employment services to scale your workforce according to project demands.",
+      title: t("clients.cservicehlisth2"),
+      description: t("clients.cservicehlistp2"),
     },
     {
       icon: <HiOutlineOfficeBuilding className="text-3xl text-blue-600" />,
-      title: "HR Outsourcing",
-      description:
-        "Complete payroll processing and administrative support to streamline your operations.",
+      title: t("clients.cservicehlisth3"),
+      description: t("clients.cservicehlistp3"),
     },
     {
       icon: <FaGlobeEurope className="text-3xl text-blue-600" />,
-      title: "Global Mobility",
-      description:
-        "Visa and work permit assistance for international hiring needs.",
+      title: t("clients.cservicehlisth4"),
+      description: t("clients.cservicehlistp4"),
     },
     {
       icon: <FaChartLine className="text-3xl text-blue-600" />,
-      title: "Market Intelligence",
-      description:
-        "Labor market research and compensation benchmarking to inform your talent strategy.",
+      title: t("clients.cservicehlisth5"),
+      description: t("clients.cservicehlistp5"),
     },
     {
       icon: <FaUsers className="text-3xl text-blue-600" />,
-      title: "Workforce Consulting",
-      description:
-        "Strategic advice on organizational design and talent acquisition.",
+      title: t("clients.cservicehlisth6"),
+      description: t("clients.cservicehlistp6"),
     },
   ];
 
   return (
     <div className="bg-gray-50">
-      
       <motion.section
         className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
         initial="hidden"
@@ -80,14 +75,13 @@ const Clients = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Strategic Hiring Solutions for Employers
+              {t("clients.clientheroh")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              At 80 Twenty, we specialize in connecting European employers with
-              top-tier talent across industries.
+              {t("clients.cherop")}
             </motion.p>
             <motion.button
               className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
@@ -95,14 +89,13 @@ const Clients = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="/contact">Partner With Us</a>
+              <a href="/contact">{t("clients.cherobtn")}</a>
             </motion.button>
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
       </motion.section>
 
-     
       <motion.section
         className="py-16 bg-white"
         initial={{ opacity: 0 }}
@@ -120,17 +113,12 @@ const Clients = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Our Recruitment Partnership
+                {t("clients.csubhead")}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                80 Twenty collaborates successfully with employers across Europe
-                and beyond to recruit and hire qualified candidates.
+                {t("clients.csubp1")}
               </p>
-              <p className="text-lg text-gray-600">
-                Our comprehensive recruitment partnership goes beyond
-                traditional hiring to deliver complete workforce solutions
-                tailored to your business needs.
-              </p>
+              <p className="text-lg text-gray-600">{t("clients.csubp2")}</p>
             </motion.div>
             <motion.div
               className="lg:w-1/2 bg-gray-100 rounded-xl overflow-hidden shadow-lg"
@@ -159,11 +147,10 @@ const Clients = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Employer Services
+              {t("clients.cserviceh1")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer a range of client-focused services to meet all your
-              hiring needs
+              {t("clients.cservicehp")}
             </p>
           </motion.div>
 
@@ -194,9 +181,8 @@ const Clients = () => {
         </div>
       </section>
 
-     
       <motion.section
-        className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
+        className="py-16 bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -210,7 +196,7 @@ const Clients = () => {
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Ready to transform your hiring process?
+            {t("clients.chairh")}
           </motion.h2>
           <motion.p
             className="text-xl mb-8 max-w-3xl mx-auto"
@@ -219,12 +205,10 @@ const Clients = () => {
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Partner with us today and experience the difference of strategic
-            recruitment.
+            {t("clients.chairp")}
           </motion.p>
-          <motion.a
-            href="/contact"
-            className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+          <motion.div
+            className="bg-white text-blue-800 inline-block px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -232,8 +216,8 @@ const Clients = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started With Our Services
-          </motion.a>
+            <a href="/contact">{t("clients.chairbtn")}</a>
+          </motion.div>
         </div>
       </motion.section>
     </div>

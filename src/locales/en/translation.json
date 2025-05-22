@@ -60,16 +60,41 @@
     "sendBtn": "Send",
     "share": "Share",
 
-    "develop": "Website development",
+    "develop": "80 Twenty",
     "trem": "Terms of use",
     "sitemap": "Sitemap",
-    "copyright": "© 2015 | All Rights reserved. 80twenty.com"
+    "copyright": "All Rights reserved. 80twenty.com"
   },
   "candidate": {
-    "candidate":"jobs for candidates",
-    "p1": "At 80 Twenty, we provide personalized support to job seekers at every stage of the recruitment process offering a free CV review, interview preparation with documentation guidance, relocation support for international roles, foreign language proficiency testing, and a pre-interview screening before you meet the employer. If no current openings match your profile, we’ll add you to our candidate database at no cost and reach out when a suitable opportunity arises. We also welcome proactive applications for advertised roles of interest.",
-    "p2": "Additionally, we offer optional services including visa and work permit assistance, tax refund support, professional document translation and certification by a court interpreter, as well as CV writing and editing.",
-    "p3": "The candiates are encouraged to contact the agency by their own initiative in case they see the advertisement for the position comliant with their qualifications.If needed, the candiates can order other optional services like visa and work permit application,tax refund,document translation by court interpretor,writing CV..etc.",
+    "cherohead": "Your Career Success Starts Here",
+    "cherop1": "At 80 Twenty, we provide personalized support at every stage of your job search",
+    "cherobtn": "Register Now",
+
+    "csubhead": "Our Candidate Services",
+    "csubp1": "Comprehensive support for your job search journey",
+    "citemh1": "Free CV Review",
+    "citemp1": "Get expert feedback to optimize your resume for better visibility",
+    "citemh2": "Interview Preparation",
+    "citemp2": "Practice sessions and documentation guidance for success",
+    "citemh3": "Relocation Support",
+    "citemp3": "Assistance with international job placements",
+    "citemh4": "Language Testing",
+    "citemp4": "Proficiency evaluation for multilingual roles",
+    "citemh5": "Document Services",
+    "citemp5": "Translation, certification and professional editing",
+    "citemh6": "Candidate Database",
+    "citemp6": "We'll match you with opportunities as they arise",
+
+    "clisth": "Optional Premium Services",
+    "clist1": "Visa and work permit assistance",
+    "clist2": "Tax refund support services",
+    "clist3": "Professional document translation and certification",
+    "clist4": "Premium CV writing and editing",
+
+    "csptialh": "How It Works",
+    "csptialp1": "We welcome proactive applications for advertised roles. If no current openings match your profile, we'll add you to our candidate database at no cost and reach out when suitable opportunities arise.",
+    "csptialp2": "Our pre-interview screening ensures you only meet with employers when there's strong mutual interest.",
+
     "from": "From",
     "inputname": "Full Name",
     "inputphone": "Phone Number",
@@ -85,6 +110,10 @@
   },
   "services": {
     "service": "Services",
+    "sheroh": "Sveobuhvatne usluge regrutacije",
+    "sherop": "Pružamo prilagođena rešenja za radnu snagu koja odgovaraju potrebama vašeg poslovanja u svim industrijama.",
+    "sherobtn": "Istražite naše usluge",
+
     "sp1": "80 Twenty is a specialized employment and temporary employment agency. Thanks to the numerous organizations we cooperate with and detailed labor market research, we can greatly facilitate your search for employment abroad and in Croatia.",
     "sp2": "As an employment agency, we have a wide network of business contacts and have information about numerous positions that are not published anywhere. We will help our candidates with obtaining work permits and visas. And for those who have experience abroad, we will also apply for a tax refund.",
     "sp3": "We provide useful business advice on writing a resume and behaving at a job interview. We organize training and education for potential candidates in accordance with the requirements and needs of individual countries and employers.",
@@ -227,8 +256,12 @@
     "sdphl7": "Strategic insights to guide HR planning and recruitment.",
     "sdphl8": "Support for business expansion into new markets through data-driven workforce intelligence We collaborate with clients to deliver focused research that supports smarter decision-making and long-term growth."
   },
+
   "careers": {
     "career": "career tips",
+    "cheroh": "Career Success Starts Here",
+    "cherop": "Essential tips to perfect your CV, ace interviews, and stand out in today's competitive job market",
+    "cherobtn": "Explore Tips",
     "ch1": "How to write a CV?",
     "ch2": "Attending the interview",
     "ch3": "Education and training",
@@ -307,12 +340,36 @@
     "cdl8": "Add links to your social networks: Facebook, Twitter, LinkedIn etc.",
     "cdl9": "Be careful what you post, your employer will surely check your profile"
   },
+
   "abouts": {
     "about-us": "About Us",
-    "misstion": "Mission",
-    "visstion": "Vision",
+    "aheroh1": "About Our Company",
+    "aherop1": "Delivering exceptional recruitment solutions with a human touch.",
+
+    "misstion": "Our Mission",
+    "visstion": "Our Vision",
     "mtext": "Constant improvement of vocational, legal and organisational operations will contribute to creating greater value for the individual and wider community.",
-    "vtext": "To become a key centre for job placement and recruitment for individuals and companies throughout the world. To be a recognised partner, known for the quality of service and responsible corporate behaviour.",
+    "vtext": "To become a key centre for job placement and recruitment forindividuals and companies throughout the world. To be a recognised partner, known for the quality of service and responsible corporate behaviour.",
+
+    "astoryh": "Our Story",
+    "astoryp": "How we became a trusted name in recruitment",
+    "asince": "Since 2010",
+    "asincep1": "Founded with a vision to transform the recruitment industry, our company has grown from a small local agency to an international recruitment partner serving clients across multiple industries and countries.",
+    "asincep2": "Over the years, we've consistently adapted to market changes while maintaining our commitment to ethical recruitment practices and personalized service.",
+
+    "avalueh": "Our Core Values",
+    "avlauep": "The principles that guide everything we do",
+    "avaluelisth1": "Integrity",
+    "avaluelistp1": "We build trust through transparency and ethical practices in all our relationships.",
+    "avaluelisth2": "Excellence",
+    "avaluelistp2": "We strive for the highest standards in service delivery and outcomes.",
+    "avaluelisth3": "Collaboration",
+    "avaluelistp3": "We believe in the power of teamwork and partnership to achieve success.",
+
+    "aaproch1": "Want to learn more about our approach?",
+    "aaprochp1": "Get in touch with our team to discuss how we can support your hiring needs.",
+    "aaprochbtn": "Contact Us Today",
+
     "alink1": "Basic data",
     "alink2": "General terms",
     "link1": "About Us",
@@ -367,8 +424,33 @@
     "feedback": "THESE ANSWERS ARE GENERAL AND EACH PARTICULAR OFFER MAY BE ACCOMPANIED BY DIFFERENT CONDITIONS."
   },
   "clients": {
-    "client": "hiring for employers",
-    "cp1": "80 Twenty collaborates successfully with employers across Europe and beyond to recruit and hire qualified candidates. We also offer a range of client-focused services, including temporary employment solutions, outsourcing, payroll and administrative support, labor market research, and assistance with obtaining visas and work permits",
+    "clientheroh": "Strategic Hiring Solutions for Employers",
+    "cherop": "At 80 Twenty, we specialize in connecting European employers with top-tier talent across industries.",
+    "cherobtn": "Partner With Us",
+
+    "csubhead": "Our Recruitment Partnership",
+    "csubp1": "80 Twenty collaborates successfully with employers across Europe and beyond to recruit and hire qualified candidates.",
+    "csubp2": "Our comprehensive recruitment partnership goes beyond traditional hiring to deliver complete workforce solutions tailored to your business needs.",
+
+    "cserviceh1": "Our Employer Services",
+    "cservicehp": "We offer a range of client-focused services to meet all your hiring needs",
+    "cservicehlisth1": "Targeted Recruitment",
+    "cservicehlistp1": "We identify and secure qualified professionals who precisely match your technical requirements and company culture.",
+    "cservicehlisth2": "Flexible Staffing",
+    "cservicehlistp2": "Temporary employment services to scale your workforce according to project demands.",
+    "cservicehlisth3": "HR Outsourcing",
+    "cservicehlistp3": "Complete payroll processing and administrative support to streamline your operations.",
+    "cservicehlisth4": "Global Mobility",
+    "cservicehlistp4": "Visa and work permit assistance for international hiring needs.",
+    "cservicehlisth5": "Market Intelligence",
+    "cservicehlistp5": "Labor market research and compensation benchmarking to inform your talent strategy.",
+    "cservicehlisth6": "Workforce Consulting",
+    "cservicehlistp6": "Strategic advice on organizational design and talent acquisition.",
+
+    "chairh": "Ready to transform your hiring process?",
+    "chairp": "Partner with us today and experience the difference of strategic recruitment.",
+    "chairbtn": "Get Started With Our Services",
+
     "uname": "Username",
     "email": "Your email",
     "employ": "Employee name",
@@ -383,9 +465,15 @@
   },
   "contacts": {
     "cpage": "Contact",
+    "cheroh": "Contact Us",
+    "cherop": "Get in touch with 80 Twenty. We're always here to serve your future.",
+    "cfindp1": "Look For The ",
+    "cfindp2": "Office Near ",
+    "cfindp3": "You",
+
     "contact": "Ispod Savskog mosta teče rijeka Sava, Drava ili Dunav?",
     "cinfo": "Contact info",
-    "info": "80twenty for employment mediation and temporary employment |80twenty business consulting doo for services Ilica191c 10000 Zagreb , Croatia",
+    "info": "80twenty for employment mediation and temporary employment | 80twenty business consulting doo for services Ilica191c 10000 Zagreb , Croatia",
     "form": "Contact form",
     "ordinary": "How many months are there in a year? (enter a numeric value)",
     "map": "Find us on the map",

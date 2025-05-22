@@ -1,25 +1,19 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import {
-  FaBlenderPhone,
-  FaBlog,
   FaFacebookF,
-  FaGoogle,
   FaLinkedinIn,
   FaLocationDot,
-  FaPhone,
-  FaPlus,
   FaTiktok,
   FaTwitter,
 } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
-import { MdMail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import footerimage from "../../assets/home/footerimg.png";
-import intenet from "../../assets/home/dimedia-logo.png";
 import { FaInstagramSquare } from "react-icons/fa";
-import { PiIntersectThree } from "react-icons/pi";
+
 import { SlSocialPintarest } from "react-icons/sl";
+import logo from "../../assets/80-twenty.png";
 const Footer = () => {
   const { t } = useTranslation();
   const navigation = [
@@ -89,7 +83,6 @@ const Footer = () => {
               </span>
               <p className="text-white/80">{t("footer.location3")}</p>
             </div>
-            
           </div>
 
           {/* contact */}
@@ -213,23 +206,21 @@ const Footer = () => {
           <div className="py-6 grid grid-cols-1 sm:grid-cols-2 custom:grid-cols-3 items-center justify-center gap-2">
             <div className="flex items-center justify-center custom:justify-normal gap-2 text-white/80">
               <a
-                className="hover:text-red-500 text-sm"
-                href="https://www.dimedia.hr/"
+                className="hover:text-amber-400 text-sm"
+                href="/"
                 target="_blank"
               >
-                {t("footer.develop")}
-              </a>
-              <a href={"https://www.dimedia.hr/"} target="_blank">
-                <img src={intenet} alt="" />
+                <img src={logo} alt="" width={50}/>
               </a>
             </div>
             <div className="text-white/80 flex items-center justify-center gap-x-3 text-sm">
               <Link>{t("footer.trem")}</Link>
-              <Link>{t("footer.trem")}</Link>
             </div>
 
             <div className="flex items-center justify-center">
-              <p className="text-white/80 text-sm">{t("footer.copyright")}</p>
+              <p className="text-white/80 text-sm">
+                © {new Date().getFullYear()} | {t("footer.copyright")}
+              </p>
             </div>
           </div>
         </div>

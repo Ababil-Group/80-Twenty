@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaGooglePlusG,
-  FaTwitter,
-  FaPhone,
-} from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import { FaInstagramSquare, FaTimes } from "react-icons/fa";
 
 import logo from "../../assets/80-twenty.png";
@@ -26,6 +20,22 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const detectCountry = async () => {
+      try {
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+        if (data?.country === "HR" && i18n?.language !== "hr") {
+          i18n.changeLanguage("hr");
+        }
+      } catch (error) {
+        console.error("Error detecting country:", error);
+      }
+    };
+
+    detectCountry();
+  }, [i18n]);
 
   // Function to convert text to URL-friendly format
   const convertToSlug = (text) => {
@@ -151,12 +161,12 @@ const Header = () => {
         </Link>
 
         <div className="hidden md:block">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-3">
             {navigation.map((item, idx) => (
               <li key={idx} className="relative group">
                 <Link
                   to={item.path}
-                  className={`font-semibold text-sm transition-colors uppercase tracking-widest font-quicksand ${
+                  className={`font-semibold text-[13px] transition-colors uppercase tracking-widest font-quicksand ${
                     location.pathname === item.path
                       ? "text-secondary border-b-2 border-secondary"
                       : "text-gray-900 hover:text-secondary"

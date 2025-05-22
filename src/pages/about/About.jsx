@@ -7,6 +7,7 @@ import {
   FaUsers,
   FaHandshake,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -28,30 +29,27 @@ const staggerContainer = {
 };
 
 const AboutUs = () => {
+  const { t } = useTranslation();
   const values = [
     {
       icon: <FaHandshake className="text-3xl text-blue-600" />,
-      title: "Integrity",
-      description:
-        "We build trust through transparency and ethical practices in all our relationships.",
+      title: t("abouts.avaluelisth1"),
+      description: t("abouts.avaluelistp1"),
     },
     {
       icon: <FaBullseye className="text-3xl text-blue-600" />,
-      title: "Excellence",
-      description:
-        "We strive for the highest standards in service delivery and outcomes.",
+      title: t("abouts.avaluelisth2"),
+      description: t("abouts.avaluelistp2"),
     },
     {
       icon: <FaUsers className="text-3xl text-blue-600" />,
-      title: "Collaboration",
-      description:
-        "We believe in the power of teamwork and partnership to achieve success.",
+      title: t("abouts.avaluelisth3"),
+      description: t("abouts.avaluelistp3"),
     },
   ];
 
   return (
     <div className="bg-gray-50">
-      
       <motion.section
         className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
         initial="hidden"
@@ -61,13 +59,13 @@ const AboutUs = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Our Company
+              {t("abouts.aheroh1")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              Delivering exceptional recruitment solutions with a human touch.
+              {t("abouts.aherop1")}
             </motion.p>
           </motion.div>
         </div>
@@ -93,14 +91,10 @@ const AboutUs = () => {
               <div className="flex items-center mb-6">
                 <FaBullseye className="text-3xl text-[#0C4591] mr-4" />
                 <h2 className="text-2xl font-bold text-gray-900">
-                  Our Mission
+                  {t("abouts.misstion")}
                 </h2>
               </div>
-              <p className="text-lg text-gray-700">
-                Constant improvement of vocational, legal and organisational
-                operations will contribute to creating greater value for the
-                individual and wider community.
-              </p>
+              <p className="text-lg text-gray-700">{t("abouts.mtext")}</p>
             </motion.div>
 
             <motion.div
@@ -112,19 +106,15 @@ const AboutUs = () => {
             >
               <div className="flex items-center mb-6">
                 <FaEye className="text-3xl text-[#FBB92E] mr-4" />
-                <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {t("abouts.visstion")}
+                </h2>
               </div>
-              <p className="text-lg text-gray-700">
-                To become a key centre for job placement and recruitment for
-                individuals and companies throughout the world. To be a
-                recognised partner, known for the quality of service and
-                responsible corporate behaviour.
-              </p>
+              <p className="text-lg text-gray-700">{t("abouts.vtext")}</p>
             </motion.div>
           </div>
         </div>
       </motion.section>
-
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,9 +125,11 @@ const AboutUs = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {t("abouts.astoryh")}
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              How we became a trusted name in recruitment
+              {t("abouts.astoryp")}
             </p>
           </motion.div>
 
@@ -151,27 +143,21 @@ const AboutUs = () => {
             <div className="md:flex">
               <div className="md:w-1/3 bg-[#2B99D3] p-8 text-white flex flex-col justify-center">
                 <FaHistory className="text-5xl mb-6 mx-auto" />
-                <h3 className="text-2xl font-bold text-center">Since 2010</h3>
+                <h3 className="text-2xl font-bold text-center">
+                  {t("abouts.asince")}
+                </h3>
               </div>
               <div className="md:w-2/3 p-8">
                 <p className="text-lg text-gray-700 mb-6">
-                  Founded with a vision to transform the recruitment industry,
-                  our company has grown from a small local agency to an
-                  international recruitment partner serving clients across
-                  multiple industries and countries.
+                  {t("abouts.asincep1")}
                 </p>
-                <p className="text-lg text-gray-700">
-                  Over the years, we've consistently adapted to market changes
-                  while maintaining our commitment to ethical recruitment
-                  practices and personalized service.
-                </p>
+                <p className="text-lg text-gray-700">{t("abouts.asincep2")}</p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-   
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -182,10 +168,10 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Core Values
+              {t("abouts.avalueh")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              {t("abouts.avlauep")}
             </p>
           </motion.div>
 
@@ -214,7 +200,6 @@ const AboutUs = () => {
         </div>
       </section>
 
- 
       <motion.section
         className="py-16 bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white"
         initial={{ opacity: 0 }}
@@ -230,7 +215,7 @@ const AboutUs = () => {
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Want to learn more about our approach?
+            {t("abouts.aaproch1")}
           </motion.h2>
           <motion.p
             className="text-xl mb-8 max-w-3xl mx-auto"
@@ -239,12 +224,10 @@ const AboutUs = () => {
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Get in touch with our team to discuss how we can support your hiring
-            needs.
+            {t("abouts.aaprochp1")}
           </motion.p>
-          <motion.a
-            href="/contact"
-            className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+          <motion.div
+            className="bg-white text-blue-800 px-8 inline-block py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -252,8 +235,8 @@ const AboutUs = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Us Today
-          </motion.a>
+            <a href="/contact">{t("abouts.aaprochbtn")}</a>
+          </motion.div>
         </div>
       </motion.section>
     </div>

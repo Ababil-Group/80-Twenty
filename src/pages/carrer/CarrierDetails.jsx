@@ -137,11 +137,11 @@ const CarrierDetails = () => {
       },
     },
   ];
-  console.log("heee", cId);
+  // console.log("heee", cId);
   const career = careerdata.find(
     (s) => s.link.toLowerCase().replace(/\s+/g, "-") === cId
   );
-  console.log("career", career);
+  // console.log("career", career);
   if (!career) {
     return <NotFoundPage />;
   }
@@ -156,11 +156,11 @@ const CarrierDetails = () => {
             <div className="flex items-center text-2xl gap-x-3 text-white/90">
               <MdArrowForwardIos />
               <h2 className="text-white/80 font-bold uppercase text-xl md:text-2xl font-quicksand ">
-                {t("services.service")}
+                {t("careers.career")}
               </h2>
               <MdArrowForwardIos />
               <h1 className="text-white/80 font-bold text-xl md:text-2xl uppercase font-quicksand">
-                {career.cardTitle}
+                {career.cardh1}
               </h1>
             </div>
             <div className="flex items-end justify-end py-14 relative pr-6 md:pr-0">
@@ -190,10 +190,9 @@ const CarrierDetails = () => {
           </div>
         </div>
       </div>
-      
+
       <section className="max-w-screen-xl mx-auto py-6 px-4">
         <div className="flex flex-col custom:flex-row gap-8">
-        
           <div className="flex-1 space-y-3 text-gray-800">
             <div className="flex flex-col">
               <div className="mb-6">

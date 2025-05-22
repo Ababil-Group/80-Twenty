@@ -7,7 +7,6 @@ import c4 from "../../assets/img/Career Tips/cover-letters-are-history.jpg";
 
 import { Link } from "react-router-dom";
 
-
 import { MdArrowForwardIos } from "react-icons/md";
 import Login from "../components/Login";
 import { motion } from "framer-motion";
@@ -32,17 +31,6 @@ const Carrer = () => {
       transition: {
         duration: 0.6,
         ease: "easeOut",
-      },
-    },
-  };
-  const slideUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.2, 0.65, 0.3, 0.9],
       },
     },
   };
@@ -119,14 +107,13 @@ const Carrer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Career Success Starts Here
+              {t("careers.cheroh")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              Essential tips to perfect your CV, ace interviews, and stand out
-              in today's competitive job market
+              {t("careers.cherop")}
             </motion.p>
             <motion.button
               className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
@@ -134,13 +121,13 @@ const Carrer = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="#tips">Explore Tips</Link>
+              <Link to="#tips"> {t("careers.cherobtn")}</Link>
             </motion.button>
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
       </motion.section>
-      
+
       <motion.section
         id="services"
         className="max-w-screen-xl mx-auto py-6 px-4"
@@ -150,7 +137,6 @@ const Carrer = () => {
         variants={container}
       >
         <div className="flex flex-col custom:flex-row gap-8">
-         
           <div className="flex-1 space-y-3 text-gray-800">
             {careerdata.map((career, ind) => (
               <motion.div
@@ -192,7 +178,6 @@ const Carrer = () => {
             ))}
           </div>
 
-          
           <motion.div
             initial="hidden"
             whileInView="visible"

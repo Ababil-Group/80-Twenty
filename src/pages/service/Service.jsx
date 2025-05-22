@@ -164,14 +164,13 @@ const Service = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={fadeIn} className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive Recruitment Services
+              {t("services.sheroh")}
             </h1>
             <motion.p
               className="text-xl max-w-3xl mx-auto mb-10"
               variants={fadeIn}
             >
-              We deliver tailored workforce solutions to meet your business
-              needs across all industries.
+              {t("services.sherop")}
             </motion.p>
             <motion.button
               className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
@@ -179,7 +178,7 @@ const Service = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="#services">Explore Our Services</a>
+              <a href="#services">{t("services.sherobtn")}</a>
             </motion.button>
           </motion.div>
         </div>

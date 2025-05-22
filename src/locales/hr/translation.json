@@ -2,11 +2,11 @@
   "menu": {
     "home": "Početna",
     "services": "Usluge",
-    "candidates": "Za kandidate",
-    "clients": "Za klijente",
-    "career": "Savjeti za karijeru",
+    "candidates": "Poslovi za kandidate",
+    "clients": "Zapošljavanje za poslodavce",
+    "career": "Saveti za karijeru",
     "about": "O nama",
-    "faq": "FAQ",
+    "faq": "Često postavljana pitanja",
     "contact": "Kontakt"
   },
   "banner": {
@@ -15,20 +15,20 @@
   },
   "herotext": {
     "headtext": "AGENCIJA ZA ZAPOŠLJAVANJE",
-    "subtext": "U suradnji s provjerenim agencijama, poslodavcima i nadležnim državnim tijelima diljem svijeta pružamo sve vrste usluga vezanih za zapošljavanje i ishođenje svih vrsta viza i dokumenta. Organiziramo obuku i edukaciju za potencijalne klijente u skladu sa zahtjevima i potrebama pojedinih zemalja i poslodavaca."
+    "subtext": "U saradnji sa renomiranim agencijama, globalnim poslodavcima i ovlašćenim institucijama širom sveta, pružamo sveobuhvatne usluge zapošljavanja, uključujući pomoć pri obradi viza i pribavljanju dokumentacije. Takođe, nudimo obrazovanje i stručno osposobljavanje prilagođeno specifičnim potrebama međunarodnih poslodavaca i zemalja destinacije."
   },
   "logotext": {
-    "heading1": "Pronađite posao",
-    "heading2": "Pronađite zaposlenika",
-    "heading3": "Ostvarite povrat poreza",
-    "heading4": "Pročitajte naše savjete",
+    "heading1": "Pronađi posao",
+    "heading2": "Zaposli radnika",
+    "heading3": "Ostvari povraćaj poreza",
+    "heading4": "Saveti i smernice za karijeru",
 
-    "subheading1": "Aplicirajte za neku od aktualno otvorenih pozicija ili pošaljite CV za buduće prilike.",
-    "subheading2": "Provjerite proces selekcije i novačenja kandidata profesionalcima.",
-    "subheading3": "Potražite besplatne savjete i preliminarnu kalkulaciju te aplicirajte za povrat poreza.",
-    "subheading4": "Držite korak sa trendovima na tržištu rada.",
+    "subheading1": "Prijavi se na neki od naših aktuelnih oglasa za posao ili pošalji svoj CV za buduće prilike.",
+    "subheading2": "Upoznaj se sa našim profesionalnim procesom zapošljavanja i pronađi idealne kandidate za svoje poslovanje.",
+    "subheading3": "Dobij besplatan poreski savet, preliminarnu procenu povraćaja poreza i pomoć pri popunjavanju prijave.",
+    "subheading4": "Budi u toku sa najnovijim trendovima na tržištu rada, analizama i savetima za razvoj karijere.",
 
-    "button": "Saznajte više"
+    "button": "Saznaj više"
   },
   "login": {
     "logintext": "Prijava",
@@ -39,8 +39,8 @@
     "loginbtn": "Prijava"
   },
   "footer": {
-    "heading": "Concessum d.o.o.",
-    "subHeading": "Concessum d.o.o. za posredovanje pri zapošljavanju i privremeno zapošljavanje | Concessum poslovno savjetovanje d.o.o. za usluge",
+    "heading": "Naš ured",
+    "subHeading": "80 twenty za posredovanje pri zapošljavanju i privremeno zapošljavanje | 80 twenty poslovno savjetovanje d.o.o. za usluge",
     "location": "Ilica191c 10000 Zagreb , Hrvatska",
     "tphone": "+385 1 4668 604",
     "mobile": "+385 1 617 1548",
@@ -60,12 +60,44 @@
     "develop": "Izrada web stranica",
     "trem": "Uvjeti korištenja",
     "sitemap": "Sitemap",
-    "copyright": "© 2015 | Sva prava pridržana. Concessum.com"
+    "copyright": "Sva prava pridržana. 80twenty.com"
   },
   "candidate": {
-    "p1": "Ako se kandidat prijavio za neku od aktualno otvorenih pozicija, a za koje zadovoljava uvjete, kandidat će dobiti besplatan pregled CV-a i savjetovanje oko izlaska na intervju i savjetovanje u vezi sakupljanja dokumentacije,a kod zapošljavanja u inozemstvu dobit će informacije u vezi preseljenja i općenito života u stranoj zemlji.",
-    "p2": "Prije samog izlaska na intervju sa poslodavcem, kandidat će proći i testiranje znanja stranog jezika i pred-intervju. Kandidati koji ne zadovoljavaju uvjete za trenutno otvorene pozicije postoji mogućnost besplatnog unosa u bazu. Takvi kandidati kontaktiraju se u momentu kada se otvore pozicije sukladne njihovim kvalifikacijama.",
-    "p3": "Ohrabrujemo kandidate da nas i sami kontaktiraju, ako vide oglašenu neku poziciju za koju bi se željeli natjecati. Po potrebi kandidat može naručiti i izborne usluge kao npr. ishođenje vize i radne dozvole, povrat poreza, prijevod dokumenata i ovjeru od sudskog tumača, pisanje i uređivanje životopisa…itd.",
+    "cherohead": "Vaš uspeh u karijeri počinje ovde",
+    "cherop1": "U 80 Twenty pružamo personalizovanu podršku u svakoj fazi vaše potrage za poslom",
+    "cherobtn": "Registruj se sada",
+
+    "csubhead": "Naše usluge za kandidate",
+    "csubp1": "Sveobuhvatna podrška na vašem putu ka zaposlenju",
+
+    "citemh1": "Besplatna provera CV-ja",
+    "citemp1": "Dobijte stručne savete za optimizaciju vašeg CV-ja radi bolje vidljivosti",
+
+    "citemh2": "Priprema za intervju",
+    "citemp2": "Vežbe i smernice za dokumentaciju koje vode ka uspehu",
+
+    "citemh3": "Podrška pri preseljenju",
+    "citemp3": "Pomoć pri međunarodnom zapošljavanju",
+
+    "citemh4": "Testiranje jezika",
+    "citemp4": "Procena znanja jezika za višejezične pozicije",
+
+    "citemh5": "Usluge dokumenata",
+    "citemp5": "Prevod, overa i profesionalna obrada dokumenata",
+
+    "citemh6": "Baza kandidata",
+    "citemp6": "Povezaćemo vas sa prilikama čim se pojave",
+
+    "clisth": "Opcione premium usluge",
+    "clist1": "Pomoć pri dobijanju vize i radne dozvole",
+    "clist2": "Podrška u vezi s povraćajem poreza",
+    "clist3": "Profesionalni prevod i overa dokumenata",
+    "clist4": "Premium izrada i uređivanje CV-ja",
+
+    "csptialh": "Kako funkcioniše",
+    "csptialp1": "Rado prihvatamo proaktivne prijave za oglašene pozicije. Ako trenutno nema otvorenih pozicija koje odgovaraju vašem profilu, dodaćemo vas u našu bazu kandidata bez ikakvih troškova i kontaktirati vas kada se pojave odgovarajuće prilike.",
+    "csptialp2": "Naša preliminarna selekcija kandidata osigurava da se sastajete sa poslodavcima samo kada postoji obostrano interesovanje.",
+
     "from": "Obrazac",
     "inputname": "Vaše ime i prezime",
     "inputphone": "Telefon",
@@ -81,7 +113,7 @@
   },
   "services": {
     "service": "Usluge",
-    "sp1": "Concessum d.o.o specijalizirana je agencija za zapošljavanje i privremeno zapošljavanje. Zahvaljujući brojnim organizacijama s kojima surađujemo i detaljnom istraživanju tržišta rada uvelike možemo olakšati vašu potragu za zaposlenjem u inozemstvu i u Hrvatskoj.",
+    "sp1": "80 twenty specijalizirana je agencija za zapošljavanje i privremeno zapošljavanje. Zahvaljujući brojnim organizacijama s kojima surađujemo i detaljnom istraživanju tržišta rada uvelike možemo olakšati vašu potragu za zaposlenjem u inozemstvu i u Hrvatskoj.",
     "sp2": "Kao agencija za zapošljavanje posjedujemo široku mrežu poslovnih kontakta i imamo informacije o brojnim pozicijama koje nisu nigdje objavljene. Našim kandidatima pomoći ćemo oko ishođenja radnih dozvola i viza. A za one koji imaju iskustva u inozemstvu aplicirati ćemo i za povrat poreza.",
     "sp3": "Pružamo korisne poslovne savjete o pisanju životopisa i ponašanju na intervjuu za posao. Organiziramo obuku i edukaciju za potencijalne kandidate u skladu sa zahtjevima i potrebama pojedinih zemalja i poslodavaca.",
     "sp4": "Nadalje, pružamo profesionalnu, učinkovitu i fleksibilnu uslugu outsourcinga, prilagođenu svakom klijentu, istražujemo tržište rada i nudimo administrativne usluge",
@@ -207,7 +239,11 @@
     "sdph3": "U današnjim uvjetima poslovanja ljudi čine ključni faktor u razvoju poslovne strategije konkurentnosti na tržištu. Strategija poduzeća tako mora sadržavati i strategiju upravljanja ljudskim potencijalima. Svako poduzeće posluje u promjenjivom okruženju, a planiranje budućnosti poduzeća zahtijeva praćenje trendova na tržištu rada i poslovnoj okolini, a tako i osiguravanje kvalitetne radne snage i njeno zadržavanje. Tržište rada, stoga čini važan faktor koji utječe na mogućnost pribavljanja kvalitetne radne snage. Ni jedno poduzeće ne može ignorirati promjenjive čimbenike koji utječu na ponudu radne snage već mora kontinuirano pratiti promjene i trendove, kao i kretanja na tržištu rada. Tržište rada kreira i nove oblike zapošljavanja, jer poduzeća moraju pravovremeno odgovoriti na promjene u poslovanju. Globalno poslovanje nameće dodatne izazove poduzećima koja, u želji da opstanu na novim tržištima, moraju upoznati uvjete poslovanja i karakteristike novog tržišta."
   },
   "careers": {
-    "career": "Kako napisati CV",
+    "career": "Saveti za karijeru",
+    "cheroh": "Uspeh u karijeri počinje ovde",
+    "cherop": "Ključni saveti za usavršavanje vašeg CV-a, uspešno polaganje intervjua i izdvajanje na konkurentnom tržištu rada",
+    "cherobtn": "Istraži savete",
+
     "ch1": "Kako napisati CV",
     "ch2": "Izlazak na intervju",
     "ch3": "Edukacija i obuka",
@@ -288,10 +324,32 @@
   },
   "abouts": {
     "about-us": "O nama",
+    "aheroh1": "O našoj kompaniji",
+    "aherop1": "Pružamo izuzetna rešenja za zapošljavanje sa ljudskim pristupom.",
     "misstion": "Misija",
     "visstion": "Vizija",
     "mtext": "Stalnim unapređenjem strukovnog, pravnog i organizacijskog poslovanja pridonijeti stvaranju većih vrijednosti za pojedinca i širu zajednicu.",
     "vtext": "Postati ključnim centrom regije u pronalaženju poslova i posredovanju pri zapošljavanju pojedinaca i tvrtki diljem svijeta. Biti uvažavan partner, prepoznatljiv po kvaliteti usluga i odgovornom ponašanju.",
+
+    "astoryh": "Naša priča",
+    "astoryp": "Kako smo postali pouzdano ime u regrutaciji",
+    "asince": "Od 2010.",
+    "asincep1": "Osnovani sa vizijom da transformišemo industriju zapošljavanja, izrasli smo iz male lokalne agencije u međunarodnog partnera za regrutaciju koji opslužuje klijente u različitim industrijama i zemljama.",
+    "asincep2": "Tokom godina, stalno smo se prilagođavali promenama na tržištu uz očuvanje posvećenosti etičkim praksama zapošljavanja i personalizovanoj usluzi.",
+
+    "avalueh": "Naše osnovne vrednosti",
+    "avlauep": "Principi koji nas vode u svemu što radimo",
+    "avaluelisth1": "Integritet",
+    "avaluelistp1": "Gradimo poverenje kroz transparentnost i etičke prakse u svim odnosima.",
+    "avaluelisth2": "Izvrsnost",
+    "avaluelistp2": "Težimo najvišim standardima u pružanju usluga i rezultatima.",
+    "avaluelisth3": "Saradnja",
+    "avaluelistp3": "Verujemo u moć timskog rada i partnerstva za postizanje uspeha.",
+
+    "aaproch1": "Želite da saznate više o našem pristupu?",
+    "aaprochp1": "Kontaktirajte naš tim i saznajte kako možemo da podržimo vaše potrebe u zapošljavanju.",
+    "aaprochbtn": "Kontaktirajte nas danas",
+
     "alink1": "Poslovni podaci",
     "alink2": "Opći uvjeti",
 
@@ -334,8 +392,39 @@
     "feedback": "OVI ODGOVORI SU OPĆENITI I SVAKA POJEDINA PONUDA MOŽE SE RAZLIKOVATI U UVJETIMA."
   },
   "clients": {
-    "client": "klijenti",
-    "cp1": "Concessum uspješno surađuje sa poslodavcima u Hrvatskoj i svijetu, a u svrhu regrutiranja i zapošljavanja kandidata. Za potrebe klijenta Concessum pruža i usluge privremenog zapošljavanja, outsourcinga i administrativne usluge kao što su obračun plaća i istraživanje tržišta, te ishođenje viza i radnih dozvola.",
+    "clientheroh": "Strateška rešenja za zapošljavanje poslodavaca",
+    "cherop": "U 80 Twenty specijalizovani smo za povezivanje evropskih poslodavaca sa vrhunskim talentima iz različitih industrija.",
+    "cherobtn": "Postanite naš partner",
+
+    "csubhead": "Naše partnerstvo u regrutaciji",
+    "csubp1": "80 Twenty uspešno sarađuje sa poslodavcima širom Evrope i šire na regrutaciji i zapošljavanju kvalifikovanih kandidata.",
+    "csubp2": "Naše sveobuhvatno partnerstvo u zapošljavanju prevazilazi tradicionalne metode i donosi kompletna rešenja za radnu snagu prilagođena potrebama vašeg poslovanja.",
+
+    "cserviceh1": "Naše usluge za poslodavce",
+    "cservicehp": "Nudimo širok spektar usluga fokusiranih na klijente kako bismo ispunili sve vaše potrebe za zapošljavanjem",
+
+    "cservicehlisth1": "Ciljano zapošljavanje",
+    "cservicehlistp1": "Identifikujemo i angažujemo kvalifikovane stručnjake koji precizno odgovaraju vašim tehničkim zahtevima i kulturi kompanije.",
+
+    "cservicehlisth2": "Fleksibilno zapošljavanje",
+    "cservicehlistp2": "Privremene usluge zapošljavanja koje omogućavaju prilagođavanje radne snage prema potrebama projekta.",
+
+    "cservicehlisth3": "HR outsourcing",
+    "cservicehlistp3": "Kompletna obrada plata i administrativna podrška radi pojednostavljivanja vašeg poslovanja.",
+
+    "cservicehlisth4": "Međunarodna mobilnost",
+    "cservicehlistp4": "Pomoć pri vizama i radnim dozvolama za potrebe međunarodnog zapošljavanja.",
+
+    "cservicehlisth5": "Analiza tržišta",
+    "cservicehlistp5": "Istraživanje tržišta rada i analiza plata za oblikovanje vaše strategije zapošljavanja.",
+
+    "cservicehlisth6": "Konsultacije o radnoj snazi",
+    "cservicehlistp6": "Strateški saveti o organizacionom dizajnu i privlačenju talenata.",
+
+    "chairh": "Spremni ste da transformišete svoj proces zapošljavanja?",
+    "chairp": "Postanite naš partner i iskusite prednosti strateške regrutacije.",
+    "chairbtn": "Započnite sa našim uslugama",
+
     "uname": "Korisničko ime",
     "email": "Vaš email",
     "employ": "Naziv poslodavca",
@@ -349,8 +438,12 @@
     "website": "Web stranica"
   },
   "contacts": {
-    "cpage": "kontakt",
-    "contact": "Ispod Savskog mosta teče rijeka Sava, Drava ili Dunav?",
+    "cpage": "Kontakt",
+    "cheroh": "Kontaktirajte nas",
+    "cherop": "Stupite u kontakt sa 80 Twenty. Uvek smo tu da podržimo vašu budućnost.",
+    "cfindp1": "Pronađite ",
+    "cfindp2": "najbližu kancelariju ",
+    "cfindp3": "u vašoj blizini",
 
     "cinfo": "Kontakt podaci",
     "info": "Contact infoConcessum d.o.o. Prilaz Gjure Deželića 71 10000 Zagreb Croatia",
