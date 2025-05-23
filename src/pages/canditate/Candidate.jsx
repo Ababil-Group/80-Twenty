@@ -101,12 +101,16 @@ const Candidate = () => {
               {t("candidate.cherop1")}
             </motion.p>
             <motion.button
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              onClick={() => {
+                const section = document.querySelector("#register");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="#register">{t("candidate.cherobtn")}</a>
+              {t("candidate.cherobtn")}
             </motion.button>
           </motion.div>
         </div>

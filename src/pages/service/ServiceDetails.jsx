@@ -191,24 +191,24 @@ const ServiceDetails = () => {
         ],
       },
     },
-    {
-      id: 5,
-      images: [s6, sa6],
-      link: t("services.link6"),
-      cardTitle: t("services.cardh6"),
-      section1: {
-        paragraphs: [
-          { p: t("serviceDetailes.sdpf1") },
-          { p: t("serviceDetailes.sdpf2") },
-        ],
-        headTile1: t("serviceDetailes.sdhf1"),
-        headTile2: t("serviceDetailes.sdhf2"),
-        headTile3: t("serviceDetailes.sdhf3"),
-        para1: t("serviceDetailes.sdhpf1"),
-        para2: t("serviceDetailes.sdhpf2"),
-        para3: t("serviceDetailes.sdhpf3"),
-      },
-    },
+    // {
+    //   id: 5,
+    //   images: [s6, sa6],
+    //   link: t("services.link6"),
+    //   cardTitle: t("services.cardh6"),
+    //   section1: {
+    //     paragraphs: [
+    //       { p: t("serviceDetailes.sdpf1") },
+    //       { p: t("serviceDetailes.sdpf2") },
+    //     ],
+    //     headTile1: t("serviceDetailes.sdhf1"),
+    //     headTile2: t("serviceDetailes.sdhf2"),
+    //     headTile3: t("serviceDetailes.sdhf3"),
+    //     para1: t("serviceDetailes.sdhpf1"),
+    //     para2: t("serviceDetailes.sdhpf2"),
+    //     para3: t("serviceDetailes.sdhpf3"),
+    //   },
+    // },
     {
       id: 6,
       images: [s7, sa7],
@@ -263,18 +263,12 @@ const ServiceDetails = () => {
         ],
       },
     },
-    {
-      id: 8,
-      images: [s9],
-      link: t("services.link9"),
-      cardTitle: t("services.cardh9"),
-    },
   ];
 
   const service = serverdata.find(
     (s) => s.link.toLowerCase().replace(/\s+/g, "-") === serviceId
   );
-  // console.log("services", service);
+  console.log("services", serviceId);
   if (!service) {
     return <NotFoundPage />;
   }

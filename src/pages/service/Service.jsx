@@ -119,14 +119,14 @@ const Service = () => {
       chardp1: t("services.cardp5"),
       btn: t("services.cardbtn"),
     },
-    {
-      id: 5,
-      img: s6,
-      link: t("services.link6"),
-      cardh1: t("services.cardh6"),
-      chardp1: t("services.cardp6"),
-      btn: t("services.cardbtn"),
-    },
+    // {
+    //   id: 5,
+    //   img: s6,
+    //   link: t("services.link6"),
+    //   cardh1: t("services.cardh6"),
+    //   chardp1: t("services.cardp6"),
+    //   btn: t("services.cardbtn"),
+    // },
     {
       id: 6,
       img: s7,
@@ -141,14 +141,6 @@ const Service = () => {
       link: t("services.link8"),
       cardh1: t("services.cardh8"),
       chardp1: t("services.cardp8"),
-      btn: t("services.cardbtn"),
-    },
-    {
-      id: 8,
-      img: s9,
-      link: t("services.link9"),
-      cardh1: t("services.cardh9"),
-      chardp1: t("services.cardp9"),
       btn: t("services.cardbtn"),
     },
   ];
@@ -173,12 +165,16 @@ const Service = () => {
               {t("services.sherop")}
             </motion.p>
             <motion.button
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              onClick={() => {
+                const section = document.querySelector("#services");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="#services">{t("services.sherobtn")}</a>
+              {t("services.sherobtn")}
             </motion.button>
           </motion.div>
         </div>

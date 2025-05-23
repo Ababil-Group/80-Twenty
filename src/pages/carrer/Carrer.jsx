@@ -116,12 +116,16 @@ const Carrer = () => {
               {t("careers.cherop")}
             </motion.p>
             <motion.button
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              onClick={() => {
+                const section = document.querySelector("#tips");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="#tips"> {t("careers.cherobtn")}</Link>
+              {t("careers.cherobtn")}
             </motion.button>
           </motion.div>
         </div>
@@ -129,7 +133,7 @@ const Carrer = () => {
       </motion.section>
 
       <motion.section
-        id="services"
+        id="tips"
         className="max-w-screen-xl mx-auto py-6 px-4"
         initial="hidden"
         whileInView="show"

@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaPinterestP,
+  FaTiktok,
+  FaTwitter,
+} from "react-icons/fa6";
 import { FaInstagramSquare, FaTimes } from "react-icons/fa";
 
 import logo from "../../assets/80-twenty.png";
@@ -113,6 +119,8 @@ const Header = () => {
       link: "https://www.instagram.com/80t.wenty/",
     },
     { icon: <FaTwitter />, link: "https://x.com/80_twenty20" },
+    { icon: <FaPinterestP />, link: "https://www.pinterest.com/80twenty0323/" },
+    { icon: <FaTiktok />, link: "https://www.tiktok.com/@80twenty?lang=en" },
   ];
 
   return (
@@ -155,7 +163,7 @@ const Header = () => {
       </div>
       <div className="border-b border-gray-200"></div>
 
-      <div className="relative px-4 lg:px-8 xl:px-0 max-w-screen-xl mx-auto flex items-center justify-between py-3 md:py-5 bg-white/70">
+      <div className="relative px-4 lg:px-8 xl:px-0 max-w-screen-xl mx-auto flex items-center justify-between py-2 md:py-2 bg-white/70">
         <Link to="/">
           <img src={logo} width={100} height={30} alt="80-twenty" />
         </Link>
