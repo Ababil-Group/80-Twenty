@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 custom:grid-cols-12 items-center justify-center py-8 px-2 sm:px-0">
           <div className="hidden custom:block col-span-4">
-            <h2 className="text-white/80 font-bold text-2xl mb-2">Menu</h2>
+            <h2 className="text-white/80 font-bold text-2xl mb-2">{t("footer.menu")}</h2>
             <ul className="flex flex-col items-start gap-y-2">
               {navigation.map((item, indx) => (
                 <li key={indx} className="flex flex-col ">

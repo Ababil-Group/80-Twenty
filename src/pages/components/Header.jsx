@@ -18,6 +18,8 @@ const Header = () => {
   const [openSubMenu, setOpenSubMenu] = useState(null);
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const [selectedLang, setSelectedLang] = useState(i18n.language);
+  const [previewLang, setPreviewLang] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,8 +125,26 @@ const Header = () => {
     { icon: <FaTiktok />, link: "https://www.tiktok.com/@80twenty?lang=en" },
   ];
 
+  useEffect(() => {
+    i18n.changeLanguage(selectedLang);
+  }, [selectedLang]);
+
+  const handleLanguageClick = (lang) => {
+    setSelectedLang(lang);
+  };
+
+  const handleMouseEnter = (lang) => {
+    setPreviewLang(lang);
+    i18n.changeLanguage(lang);
+  };
+
+  const handleMouseLeave = () => {
+    setPreviewLang(null);
+    i18n.changeLanguage(selectedLang);
+  };
+
   return (
-    <nav
+    <header
       className={`bg-white transition-shadow ${isScrolled ? "shadow-md" : ""}`}
     >
       <div className="hidden max-w-screen-xl mx-auto md:flex items-center justify-between px-4 lg:px-8 xl:px-0 py-2">
@@ -134,7 +154,7 @@ const Header = () => {
               key={index}
               to={item.link}
               target="_blank"
-              className={`flex items-center px-3 py-1 hover:translate-y-1 transition-transform duration-500 text-blue ${
+              className={`flex items-center px-3 py-1 hover:translate-y-1 transition-transform duration-500 text-secondary ${
                 index !== 0 ? "border-l border-gray-200" : ""
               }`}
             >
@@ -144,21 +164,26 @@ const Header = () => {
         </div>
 
         <div className="flex items-center">
-          {["HR", "EN"].map((lang) => (
-            <button
-              key={lang}
-              className={`px-3 py-1 hover:text-secondary cursor-pointer ${
-                lang === "EN" ? "border-l border-r border-gray-200" : ""
-              } ${
-                i18n.language === lang.toLowerCase()
-                  ? "text-secondary font-bold"
-                  : "text-gray-800"
-              }`}
-              onClick={() => i18n.changeLanguage(lang.toLowerCase())}
-            >
-              {lang}
-            </button>
-          ))}
+          {["HR", "EN"].map((lang) => {
+            const langLower = lang.toLowerCase();
+            const isActive = (previewLang || selectedLang) === langLower;
+
+            return (
+              <button
+                key={lang}
+                className={`px-3 py-1 hover:text-secondary cursor-pointer rounded-md mr-2 border hover:translate-y-1 transition-transform duration-500 ${
+                  isActive
+                    ? "border-secondary text-secondary font-bold"
+                    : "border-gray-300 text-gray-800"
+                }`}
+                onClick={() => handleLanguageClick(langLower)}
+                onMouseEnter={() => handleMouseEnter(langLower)}
+                onMouseLeave={handleMouseLeave}
+              >
+                {lang}
+              </button>
+            );
+          })}
         </div>
       </div>
       <div className="border-b border-gray-200"></div>
@@ -322,16 +347,6 @@ const Header = () => {
                         )}
                       </li>
                     ))}
-                    {/* <li className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-300 rounded-lg transition-colors border-b border-gray-300">
-                      <a
-                        href="https://www.concessum.com/blog/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Blog
-                      </a>
-                    </li> */}
                   </ul>
                 </nav>
               </div>
@@ -339,7 +354,7 @@ const Header = () => {
           </div>
         )}
       </div>
-    </nav>
+    </header>
   );
 };
 

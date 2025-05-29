@@ -60,7 +60,8 @@
     "develop": "Izrada web stranica",
     "trem": "Uvjeti korištenja",
     "sitemap": "Sitemap",
-    "copyright": "Sva prava pridržana. 80twenty.com"
+    "copyright": "Sva prava pridržana. 80twenty.com",
+    "menu": "Izbornik"
   },
   "candidate": {
     "cherohead": "Vaš uspeh u karijeri počinje ovde",
@@ -238,9 +239,18 @@
     "sdlga3": "Izdavanje potrebnih dokumenata zaposlenicima",
     "sdlga4": "Vođenje dokumentacije za prijavu stranaca u svrhu dobivanja radne i boravišne dozvole.",
 
-    "sdph1": "Višegodišnje iskustvo dovelo nas je do saznanja da je praćenje i predviđanje kretanja na tržištu rada, rezultat dinamičkog međuodnosa čimbenika kojih svako poduzeće mora uzeti u obzir pri planiranju svojih aktivnosti kao i strategiji postizanja veće konkurentnosti i položaja poduzeća.",
-    "sdph2": "Obavljamo detaljno istraživanje tržišta prema potrebi i u dogovoru s klijentom.",
-    "sdph3": "U današnjim uvjetima poslovanja ljudi čine ključni faktor u razvoju poslovne strategije konkurentnosti na tržištu. Strategija poduzeća tako mora sadržavati i strategiju upravljanja ljudskim potencijalima. Svako poduzeće posluje u promjenjivom okruženju, a planiranje budućnosti poduzeća zahtijeva praćenje trendova na tržištu rada i poslovnoj okolini, a tako i osiguravanje kvalitetne radne snage i njeno zadržavanje. Tržište rada, stoga čini važan faktor koji utječe na mogućnost pribavljanja kvalitetne radne snage. Ni jedno poduzeće ne može ignorirati promjenjive čimbenike koji utječu na ponudu radne snage već mora kontinuirano pratiti promjene i trendove, kao i kretanja na tržištu rada. Tržište rada kreira i nove oblike zapošljavanja, jer poduzeća moraju pravovremeno odgovoriti na promjene u poslovanju. Globalno poslovanje nameće dodatne izazove poduzećima koja, u želji da opstanu na novim tržištima, moraju upoznati uvjete poslovanja i karakteristike novog tržišta."
+    "sdphp1": "U 80 Twenty razumijemo da je učinkovita analiza tržišta rada ključna za poduzeća koja žele ostati konkurentna i strateški pozicionirana u stalno promjenjivom gospodarskom okruženju.",
+    "sdphp2": "Naše usluge istraživanja tržišta rada pomažu poduzećima u praćenju trendova zapošljavanja, razumijevanju dinamike radne snage i predviđanju potreba za zapošljavanjem. S godinama praktičnog iskustva, znamo da je ključ snažne poslovne strategije usklađivanje planiranja ljudskih resursa s promjenama na tržištu u stvarnom vremenu.",
+    "sdphlp3": "Zašto je istraživanje tržišta rada važno",
+    "sdphl1": "Tržište rada igra ključnu ulogu u osiguravanju i zadržavanju kvalificirane radne snage.",
+    "sdphl2": "Dinamične promjene u području zapošljavanja zahtijevaju stalno praćenje i prilagodbu.",
+    "sdphl3": "Tvrtke moraju brzo reagirati na nove oblike zapošljavanja i trendove radne snage kako bi ostale agilne i konkurentne.",
+    "sdphl4": "Globalna ekspanzija donosi složene izazove — razumijevanje lokalnih tržišnih uvjeta ključno je za uspjeh.",
+    "sdphlp4": "Zašto je istraživanje tržišta rada važno",
+    "sdphl5": "Detaljna analiza trendova tržišta rada",
+    "sdphl6": "Prilagođeno istraživanje radne snage temeljeno na vašoj industriji i regiji",
+    "sdphl7": "Strateški uvidi za vođenje HR planiranja i zapošljavanja.",
+    "sdphl8": "Podrška širenju poslovanja na nova tržišta kroz analitiku radne snage temeljenu na podacima. Surađujemo s klijentima kako bismo isporučili ciljana istraživanja koja podupiru pametnije donošenje odluka i dugoročni rast."
   },
   "careers": {
     "career": "Saveti za karijeru",
