@@ -63,7 +63,7 @@ const Footer = () => {
               </span>
               <p className="text-white/80">{t("footer.location1")}</p>
             </div>
-            <div className="text-center text-white/80 py-2 space-y-3">
+            {/* <div className="text-center text-white/80 py-2 space-y-3">
               <span className=" flex items-center justify-center gap-2">
                 <FaLocationDot className="text-[#225EC3] size-5" />
 
@@ -82,7 +82,7 @@ const Footer = () => {
                 </p>
               </span>
               <p className="text-white/80">{t("footer.location3")}</p>
-            </div>
+            </div> */}
           </div>
 
           {/* contact */}
