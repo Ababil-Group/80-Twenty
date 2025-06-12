@@ -167,14 +167,14 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        className="max-w-screen-lg mx-auto mb-10 p-2"
+        className="max-w-screen-xl mx-auto py-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
         <motion.h3
-          className="text-gray-800 mb-4 pb-2 inline-block text-4xl max-w-xs font-bold font-quicksand border-b-4 border-amber-500"
+          className="text-gray-800 mb-8 pb-2 inline-block text-4xl max-w-xs font-bold font-quicksand relative"
           initial={{ x: -50 }}
           whileInView={{ x: 0 }}
           transition={{ duration: 0.6 }}
@@ -185,37 +185,55 @@ const Contact = () => {
             {t("contacts.cfindp2")}
           </span>{" "}
           {t("contacts.cfindp3")}
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full"></span>
         </motion.h3>
 
-        <div className="grid grid-cols-1 custom:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 gap-8 mt-8">
           <motion.div
-            className="rounded-lg overflow-hidden border border-gray-300 hover:shadow-md shadow-gray-300 cursor-pointer"
+            className="group relative rounded-xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.02, translateY: -5 }}
+            whileHover={{ translateY: -5 }}
           >
-            <div className="h-[300px] w-full">
+            {/* Map with gradient overlay */}
+            <div className="relative h-[350px] w-full overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10"></div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.5363866145653!2d-0.0013758999999999998!3d51.54006269999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d619425c5f9%3A0x211fc273a1979577!2sUnex%20Tower%2C%205%20Station%20St%2C%20London%20E15%201LA%2C%20UK!5e0!3m2!1sen!2sbd!4v1748716128963!5m2!1sen!2sbd"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
-              ></iframe>
+              />
             </div>
-            <div className="p-4">
-              <div className="text-start py-2 space-y-3">
-                <span className="flex items-center gap-4">
-                  <FaMapLocationDot className="text-[#5478c4] size-5" />
-                  <p className="text-xl sm:text-2xl text-[#26587D] font-bold font-quicksand py-2">
-                    {t("footer.locationname0")}
-                  </p>
-                </span>
-                <p className="text-base sm:text-lg text-gray-700 font-medium font-quicksand">
-                  {t("footer.location1")}
-                </p>
+
+            {/* Location info with improved design */}
+            <div className="absolute bottom-0 left-0 right-0 z-20 p-6 text-white">
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1">
+                    <FaMapLocationDot className="text-amber-400 size-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold font-quicksand text-white drop-shadow-md">
+                      {t("footer.locationname0")}
+                    </h4>
+                    <p className="text-white/90 font-medium font-quicksand mt-1">
+                      {t("footer.location1")}
+                    </p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=Unex+Tower,+5+Station+St,+London+E15+1LA,+UK"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-amber-400 text-gray-900 font-semibold rounded-md hover:bg-amber-500 transition-colors duration-200"
+                    >
+                      Get Directions
+                      <IoIosArrowRoundForward className="text-xl" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
