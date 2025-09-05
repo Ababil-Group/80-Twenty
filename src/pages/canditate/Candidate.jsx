@@ -320,7 +320,7 @@ const Candidate = () => {
             </motion.div>
 
             <motion.button
-              className="w-full md:w-auto h-12 px-8 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold uppercase flex items-center justify-center gap-2 shadow-lg transition-colors"
+              className="w-full md:w-auto h-12 px-8 rounded-lg bg-[#ffb10a] hover:bg-[#FBB92E] text-gray-900 font-bold uppercase flex items-center justify-center gap-2 shadow-lg transition-colors cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

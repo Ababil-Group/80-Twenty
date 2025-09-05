@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import {
+  FaEnvelopeOpen,
   FaFacebookF,
   FaLinkedinIn,
   FaLocationDot,
@@ -10,7 +11,7 @@ import {
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 import footerimage from "../../assets/home/footerimg.png";
-import { FaInstagramSquare } from "react-icons/fa";
+import { FaEnvelope, FaInstagramSquare } from "react-icons/fa";
 
 import { SlSocialPintarest } from "react-icons/sl";
 import logo from "../../assets/80-twenty.png";
@@ -31,7 +32,9 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 custom:grid-cols-12 items-center justify-center py-8 px-2 sm:px-0">
           <div className="hidden custom:block col-span-4">
-            <h2 className="text-white/80 font-bold text-2xl mb-2">{t("footer.menu")}</h2>
+            <h2 className="text-white/80 font-bold text-2xl mb-2">
+              {t("footer.menu")}
+            </h2>
             <ul className="flex flex-col items-start gap-y-2">
               {navigation.map((item, indx) => (
                 <li key={indx} className="flex flex-col ">
@@ -62,6 +65,14 @@ const Footer = () => {
                 </p>
               </span>
               <p className="text-white/80">{t("footer.location1")}</p>
+            </div>
+            <div className=" text-center text-white/80 py-2 space-y-3">
+              <span className=" flex items-center justify-center gap-2">
+                <FaEnvelope className="text-[#225EC3] size-5" />
+
+                <p className="text-xl font-medium">Drop an Email</p>
+              </span>
+              <p className="text-white/80">ceo@80twenty.online</p>
             </div>
             {/* <div className="text-center text-white/80 py-2 space-y-3">
               <span className=" flex items-center justify-center gap-2">
@@ -210,7 +221,7 @@ const Footer = () => {
                 href="/"
                 target="_blank"
               >
-                <img src={logo} alt="" width={50}/>
+                <img src={logo} alt="" width={50} />
               </a>
             </div>
             <div className="text-white/80 flex items-center justify-center gap-x-3 text-sm">
