@@ -15,7 +15,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import { BsArrowRight } from "react-icons/bs";
-
+import heroImage from "../../assets/candidate/heroimage.jpg";
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -83,14 +83,20 @@ const Candidate = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+      {/* heroimage first section */}
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative text-white bg-cover bg-center min-h-screen flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroImage})` }} // fixed
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div> {/* overlay */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("candidate.cherohead")}
             </h1>
@@ -105,7 +111,7 @@ const Candidate = () => {
                 const section = document.querySelector("#register");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
+              className="bg-[#FBB92E] text-gray-950 px-8 py-3 rounded-lg font-bold hover:bg-[#ffb617] transition-all transform hover:scale-105 cursor-pointer text-xl"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

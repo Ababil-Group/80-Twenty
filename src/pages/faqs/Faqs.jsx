@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
+import heroImage from "../../assets/faq/herofaq.webp";
 const Faqs = () => {
   const { t } = useTranslation();
 
@@ -34,7 +34,6 @@ const Faqs = () => {
     },
   };
 
- 
   const faqItems = [
     { id: 1, heading: "fh1", content: "fp1" },
     { id: 2, heading: "fh2", content: "fp2" },
@@ -52,15 +51,19 @@ const Faqs = () => {
 
   return (
     <div className="bg-white/90">
-    
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative text-white bg-cover bg-center h-[70vh] flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("faqs.faq")}
             </h1>
@@ -69,7 +72,6 @@ const Faqs = () => {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
       </motion.section>
 
-      
       <motion.section
         className="max-w-screen-xl mx-auto py-6 px-4"
         initial="hidden"
@@ -77,7 +79,6 @@ const Faqs = () => {
         variants={staggerContainer}
       >
         <div className="flex flex-col custom:flex-row gap-8">
-          
           <motion.div
             className="flex-1 space-y-6 text-gray-800 font-quicksand"
             variants={staggerContainer}

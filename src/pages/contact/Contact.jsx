@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import contactImage from "../../assets/contact.jpg";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
+import heroImage from "../../assets/contact/heroimage.avif";
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -31,13 +31,15 @@ const Contact = () => {
   return (
     <div className="bg-white/90">
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative bg-cover bg-center text-white h-[70vh] flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div variants={fadeIn}>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("contacts.cheroh")}
             </h1>

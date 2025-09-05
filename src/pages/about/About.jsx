@@ -8,7 +8,7 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-
+import heroImage from "../../assets/about/heroimage.webp";
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -51,13 +51,18 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-50">
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative text-white bg-cover bg-center min-h-screen flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroImage})` }} // fixed
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div> {/* overlay */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("abouts.aheroh1")}
             </h1>

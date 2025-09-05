@@ -20,7 +20,7 @@ import s9 from "../../assets/img/Service/s9.jpg";
 import { Link } from "react-router-dom";
 import { ImMail } from "react-icons/im";
 import { motion, useScroll } from "framer-motion";
-
+import heroSevice from "../../assets/sevices/heroservice.jpg";
 const Service = () => {
   const { t } = useTranslation();
 
@@ -148,13 +148,18 @@ const Service = () => {
   return (
     <div className="bg-white/90">
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative text-white bg-cover bg-center min-h-screen flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroSevice})` }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div> {/* overlay */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("services.sheroh")}
             </h1>
@@ -169,7 +174,7 @@ const Service = () => {
                 const section = document.querySelector("#services");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
+              className="bg-[#FBB92E] text-gray-950 px-8 py-3 rounded-lg font-bold hover:bg-[#f8b31d] transition-all transform hover:scale-105 cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -178,7 +183,6 @@ const Service = () => {
             </motion.button>
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-white/10 backdrop-blur-sm"></div>
       </motion.section>
 
       <motion.section

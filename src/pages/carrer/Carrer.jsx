@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { MdArrowForwardIos } from "react-icons/md";
 import Login from "../components/Login";
 import { motion } from "framer-motion";
+import heroImage from "../../assets/career/heroimage.jpg";
 const Carrer = () => {
   const { t } = useTranslation();
 
@@ -99,13 +100,18 @@ const Carrer = () => {
   return (
     <div className="bg-white/90">
       <motion.section
-        className="relative bg-gradient-to-r from-[#2B99D3] to-[#0C4591] text-white py-20"
+        className="relative text-white bg-cover bg-center min-h-screen flex items-center justify-center"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
+        style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div variants={fadeIn} className="text-center">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            variants={fadeIn}
+            className="flex flex-col items-center justify-center"
+          >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               {t("careers.cheroh")}
             </h1>
@@ -120,7 +126,7 @@ const Carrer = () => {
                 const section = document.querySelector("#tips");
                 section?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="bg-white text-[#0C4591] px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 cursor-pointer"
+              className="bg-[#FBB92E] text-gray-950 px-8 py-3 rounded-lg font-bold hover:bg-[#fdb417] transition-all transform hover:scale-105 cursor-pointer"
               variants={fadeIn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
